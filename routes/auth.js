@@ -19,14 +19,14 @@ function auth(app , randomstring, Users,  passport) {
     else res.send(401, "Can't find User On Facebook. It May Be Unusable.");
   })
   .post('/signup', async(req,res)=>{
-    var user = new Users(req.body);
+    var user = new Users(req.body); // id, passwd, name
     console.log(req.body)
     var result = await user.save();
     if(!result.ok) return res.status(200).json(user);
     else return res.status(500).json({message : "fail!"})
   })
   .post('/signin', async(req,res)=>{
-    var result = await Users.findOne(req.body);
+    var result = await Users.findOne(req.body); // id, passwd
     if(!result) return res.status(404).json({message : "User Not Found!"})
     else return res.status(200).json(result);
   })

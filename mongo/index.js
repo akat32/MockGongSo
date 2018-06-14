@@ -12,7 +12,7 @@ db.once('open', function callback () { console.log("Mongo On"); });
 
 var UsersSchema = mongoose.Schema({
   id : {type : String}, // 테스트 용 아이디
-  passwd : {type : String}, // 테스트 용 비번
+  passwd : {type : String}, // 테스트 용
   name : {type : String}, // 유저 이름
   token : {type : String}, // 소셜 로그인 시 사용될 토큰
   pushNotifications : [{  // 푸쉬 알림
@@ -36,7 +36,7 @@ var UsersSchema = mongoose.Schema({
     startDay : {type : Date}, //시작일
     isEnd : {type : Boolean, default : false}, // 이거 종료됨?
     endDay : {type : Date}, // 종료일
-    themaCode : {type : String}, // 테마
+    themaCode : {type : String, default : "base"}, // 테마
     middleMandalArt : [{ // 3 * 3 칸 짜리 만다라트 칸
       middleTitle : {type : String}, // 중간 칸 목표
       achievement : {type : Number, default : 0}, // 성취도
