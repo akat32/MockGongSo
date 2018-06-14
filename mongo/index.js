@@ -11,11 +11,13 @@ db.once('open', function callback () { console.log("Mongo On"); });
 
 
 var UsersSchema = mongoose.Schema({
+  id : {type : String}, // 테스트 용 아이디
+  passwd : {type : String}, // 테스트 용 비번
+  name : {type : String}, // 유저 이름
   token : {type : String}, // 소셜 로그인 시 사용될 토큰
   pushNotifications : [{  // 푸쉬 알림
     time : {type : Date}
   }],
-  name : {type : String}, // 유저 이름
   profileImage : {type : String}, // 프로필 사진
   userDiary : [{ // 유저 일기
     title : {type : String, default : "제목"}, // 일기 제목
@@ -24,7 +26,7 @@ var UsersSchema = mongoose.Schema({
   }],
   mandalArtTheme : [{  // 만다라트 테마
     themaCode : {type : String} // 테마 코드 (랜덤스트링)
-  }], 
+  }],
   userMandalArt : [{ //유저 만다라트
     name : {type : String}, // 만다라트 이름
     goal : {type : String}, // 만다라트 목표
@@ -50,7 +52,7 @@ var UsersSchema = mongoose.Schema({
 Users = mongoose.model('users', UsersSchema);
 
 
-require('./err')(UsersSchema);
+//require('./err')(UsersSchema);
 
 
 exports.Users = Users;
