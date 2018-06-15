@@ -47,6 +47,8 @@ var UsersSchema = mongoose.Schema({
       }]
     }]
   }],
+  mandalCnt : {type : Number, default : 0}, // 현재 삼각형 만다라트 갯수
+  mandalMax : {type : Number, default : 3}, // 삼각형 만다라트 쵀대 갯수
   triangleMandalArt : [{ // 삼각형 만다라트
     name : {type : String}, // 만다라트 이름
     goal : {type : String}, // 만다라트 목표
@@ -84,7 +86,7 @@ var ShopSchema = mongoose.Schema({
 
 
 Users = mongoose.model('users', UsersSchema);
-Shop = mongoose.model('shop', ShopSchema);
+Shop = mongoose.  model('shop', ShopSchema);
 
 //require('./err')(UsersSchema);
 exports.Users = Users;
