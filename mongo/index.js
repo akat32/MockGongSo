@@ -8,8 +8,6 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () { console.log("Mongo On"); });
 
-
-
 var UsersSchema = mongoose.Schema({
   id : {type : String}, // 테스트 용 아이디
   passwd : {type : String}, // 테스트 용
@@ -63,13 +61,32 @@ var UsersSchema = mongoose.Schema({
         achievement : {type : Number, default : 0} //작은 칸 성취도
       }]
     }]
-  }]
+  }],
+  targetAD : {
+    name : {type : String}, // 광고 회사
+    title : {type : String}, // 광고 제목
+    img : {type : String}, // 광고 사진
+    link : {type : String} // 광고 링크
+  }
 });
-Users = mongoose.model('users', UsersSchema);
 
+var ShopSchema = mongoose.Schema({
+  thema : [{ // 테마
+    code : {type : String}, // 테마 코드
+  }],
+  Advertising : [{ // 광고
+    name : {type : String}, // 광고 회사
+    title : {type : String}, // 광고 제목
+    img : {type : String}, // 광고 사진
+    link : {type : String} // 광고 링크
+  }]
+})
+
+
+Users = mongoose.model('users', UsersSchema);
+Shop = mongoose.model('shop', ShopSchema);
 
 //require('./err')(UsersSchema);
-
-
 exports.Users = Users;
+exports.Shop = Shop;
 exports.db = db;
