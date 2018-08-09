@@ -1,10 +1,11 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose'
 
-mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost/MockSal');
+mongoose.Promise = global.Promise;
 
 var db = mongoose.connection;
+
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () { console.log("Mongo On"); });
 
@@ -85,10 +86,11 @@ var ShopSchema = mongoose.Schema({
 })
 
 
-Users = mongoose.model('users', UsersSchema);
-Shop = mongoose.  model('shop', ShopSchema);
+var Users = mongoose.model('users', UsersSchema);
+var Shop = mongoose.model('shop', ShopSchema);
 
-//require('./err')(UsersSchema);
-exports.Users = Users;
-exports.Shop = Shop;
-exports.db = db;
+
+export {Users, Shop, db};
+// exports.Users = Users;
+// exports.Shop = Shop;
+// exports.db = db;
