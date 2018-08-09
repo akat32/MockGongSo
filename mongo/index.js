@@ -90,7 +90,9 @@ var Users = mongoose.model('users', UsersSchema);
 var Shop = mongoose.model('shop', ShopSchema);
 
 
-export {Users, Shop, db};
+export {Users, Shop};
+
+export default db;
+
 // exports.Users = Users;
 // exports.Shop = Shop;
-// exports.db = db;

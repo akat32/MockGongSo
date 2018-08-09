@@ -2,7 +2,7 @@ import express from 'express'
 var app = express();
 import rndstring from 'randomstring'
 import bodyParser from 'body-parser'
-
+import path from 'path'
 
 
 import {Users, Shop} from './mongo';
@@ -11,12 +11,14 @@ import {Users, Shop} from './mongo';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({limit: '1gb', extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
 
 //let passport = require('./passport')(Users);
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 
 const PORT = 3321;
 
@@ -28,5 +30,5 @@ app.listen(PORT, ()=>{
 
 
 
-require('./routes/test')(app);
+require('./routes/webLink')(app);
 // require('./routes/auth/auth')(app, Users, passport);
