@@ -16,9 +16,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-//let passport = require('./passport')(Users);
-//app.use(passport.initialize());
-//app.use(passport.session());
+let passport = require('./passport')(Users);
+app.use(passport.initialize());
+app.use(passport.session());
 
 const PORT = 3321;
 
@@ -31,4 +31,4 @@ app.listen(PORT, ()=>{
 
 
 require('./routes/webLink')(app);
-// require('./routes/auth/auth')(app, Users, passport);
+require('./routes/auth/auth')(app, Users, passport);

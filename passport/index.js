@@ -3,12 +3,13 @@ var passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const GitHubTokenStrategy = require('passport-github-token')
 const TwitterTokenStrategy = require('passport-twitter-token')
-const FacebookTokenStrategy = require('passport-facebook-token') 
+const FacebookTokenStrategy = require('passport-facebook-token')
+const FacebookWebTokenStrategy = require('passport-facebook')
 module.exports = (Users) =>{
   //passport serialize
   passport.serializeUser((user, done)=>{done(null, user);});
   passport.deserializeUser((obj, done)=>{done(null, obj);});
-  
+
   passport.use(new LocalStrategy({ // local 전략을 세움
       usernameField: 'id',
       passwordField: 'passwd',
@@ -19,8 +20,8 @@ module.exports = (Users) =>{
       if(!user) return done({message:"아이디나 비밀번호가 틀렸습니다."},false,null);
       else return done(null,user);
   }));
-  
-    
+
+
   if(social.facebook.use){
     passport.use(new FacebookTokenStrategy({
       clientID: social.facebook.clientID,
@@ -29,6 +30,16 @@ module.exports = (Users) =>{
     }, (accessToken, refreshToken, profile, done)=>{
       console.log(profile)
       done(null, profile);
+    }));
+
+    passport.use(new FacebookWebTokenStrategy({
+      clientID: social.facebook.clientID,
+      clientSecret: social.facebook.clientSecret,
+      callbackURL: "/",
+      profileFields: ['id', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'verified', 'displayName'],
+    },(accessToken, refreshToken, profile, done)=>{
+      console.log(profile);
+      done(null, profile)
     }));
   }
   return passport;
