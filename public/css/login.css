@@ -1,0 +1,88 @@
+body{
+  margin : 0;
+  background:#e2e2e2;
+  weight : 100vw;
+}
+.Logo{
+  width: 33.1vw;
+  height: 33.1vw;
+  background: #b7ca79;
+  border-radius: 50%;
+  margin : auto;
+  margin-top: 12.7vh;
+}
+.inputArea{
+  width: 60.7vw;
+  height: 12vh;
+  margin: auto;
+  margin-top : 9vh;
+  margin-bottom: 4.5vh;
+}
+.id{
+  margin-bottom: 3.8vh;
+}
+.passwd{
+}
+::placeholder{
+  /* NotoSansCJKkr-Medium */
+  font-size: 3.5vw;
+  color:#000;
+}
+.inputArea > input{
+  text-indent: 1.5vw;
+  font-size: 3.5vw;
+  background: #e2e2e2;
+  border: 0px;
+  border-bottom: 2px solid #b7ca79;
+  width: 100%;
+  height: 4vh;
+}
+.LoginBtn{
+  background: #b7ca79;
+  width: 60.7vw;
+  height: 6vh;
+  margin:auto;
+  border-radius: 0.5em;
+  text-align: center;
+  line-height: 5.5vh;
+  /* NotoSansCJKkr-Medium */
+}
+.signText{
+  width: 46.3vw;
+  text-align: center;
+  margin: auto;
+  margin-top: 1.8vh;
+  margin-bottom: 10vh;
+}
+.textSocial{
+    /*NotoSansCJKkr-Medium*/
+  font-size: 1.7vh;
+  text-align: center;
+  margin-bottom: 2vh;
+}
+.index{
+  font-size: 1.7vh;
+}
+.social{
+  background: #e2e2e2;
+  width: 21vh;
+  height: 6vh;
+  margin:auto;
+  display: flex;
+}
+.social > div{
+  height: 6vh;
+  width: 6vh;
+  border-radius: 2em;
+}
+.facebook{
+  background: blue;
+  margin-right: 1.5vh;
+}
+.google{
+  background: white;
+  margin-right: 1.5vh;
+}
+.kakaotalk{
+  background: yellow;
+}

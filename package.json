@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^5.3.1",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
     "passport-facebook-token": "^3.3.0",
