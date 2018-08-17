@@ -13,7 +13,7 @@ body{
   margin-top: 12.7vh;
 }
 .inputArea{
-  width: 60vw;
+  width: 57vw;
   height: 12vh;
   margin-left: 20vw;
   margin-top : 9vh;
@@ -42,6 +42,8 @@ body{
 }
 a{
   text-decoration:none;
+  color:#000;
+  font-weight: bold;
 }
 .LoginBtn{
   background: #b7ca79;
@@ -55,7 +57,7 @@ a{
 }
 .signText{
   font-family: 'NotoSansCJKkr-Medium';
-  width: 46.3vw;
+  width: 47vw;
   text-align: center;
   margin: auto;
   margin-top: 1.8vh;
@@ -63,12 +65,12 @@ a{
 }
 .textSocial{
   font-family: 'NotoSansCJKkr-Medium';
-  font-size: 1.7vh;
+  font-size: 1.9vh;
   text-align: center;
   margin-bottom: 2.5vh;
 }
 .index{
-  font-size: 1.7vh;
+  font-size: 1.9vh;
 }
 .social{
   background: #e2e2e2;
