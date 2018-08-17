@@ -13,9 +13,9 @@ body{
   margin-top: 12.7vh;
 }
 .inputArea{
-  width: 57vw;
+  width: 58vw;
   height: 12vh;
-  margin-left: 20vw;
+  margin:auto;
   margin-top : 9vh;
   margin-bottom: 4.5vh;
 }
