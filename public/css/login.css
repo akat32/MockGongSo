@@ -1,3 +1,4 @@
+@font-face{font-family: 'NotoSansCJKkr-Medium'; src:url('/font/NotoSansCJKkr-Medium.otf');}
 body{
   margin : 0;
   background:#e2e2e2;
@@ -12,7 +13,7 @@ body{
   margin-top: 12.7vh;
 }
 .inputArea{
-  width: 60.7vw;
+  width: 60vw;
   height: 12vh;
   margin: auto;
   margin-top : 9vh;
@@ -24,11 +25,13 @@ body{
 .passwd{
 }
 ::placeholder{
-  /* NotoSansCJKkr-Medium */
+  font-family: 'NotoSansCJKkr-Medium';
   font-size: 3.5vw;
   color:#000;
 }
 .inputArea > input{
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
   text-indent: 1.5vw;
   font-size: 3.5vw;
   background: #e2e2e2;
@@ -37,17 +40,21 @@ body{
   width: 100%;
   height: 4vh;
 }
+a{
+  text-decoration:none;
+}
 .LoginBtn{
   background: #b7ca79;
-  width: 60.7vw;
+  width: 60vw;
   height: 6vh;
   margin:auto;
   border-radius: 0.5em;
   text-align: center;
   line-height: 5.5vh;
-  /* NotoSansCJKkr-Medium */
+  font-family: 'NotoSansCJKkr-Medium';
 }
 .signText{
+  font-family: 'NotoSansCJKkr-Medium';
   width: 46.3vw;
   text-align: center;
   margin: auto;
@@ -55,17 +62,17 @@ body{
   margin-bottom: 10vh;
 }
 .textSocial{
-    /*NotoSansCJKkr-Medium*/
+  font-family: 'NotoSansCJKkr-Medium';
   font-size: 1.7vh;
   text-align: center;
-  margin-bottom: 2vh;
+  margin-bottom: 2.5vh;
 }
 .index{
   font-size: 1.7vh;
 }
 .social{
   background: #e2e2e2;
-  width: 21vh;
+  width: 23vh;
   height: 6vh;
   margin:auto;
   display: flex;
@@ -76,13 +83,19 @@ body{
   border-radius: 2em;
 }
 .facebook{
-  background: blue;
-  margin-right: 1.5vh;
+  background-image: url('http://localhost:3321/img/facebook.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 2.5vh;
 }
 .google{
-  background: white;
-  margin-right: 1.5vh;
+  background-image: url('http://localhost:3321/img/google.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 2.5vh;
 }
 .kakaotalk{
-  background: yellow;
+  background-image: url('http://localhost:3321/img/kakao.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
