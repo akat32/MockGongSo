@@ -14,4 +14,7 @@ function test(app){
   .get('/mandals',(req,res)=>{
     res.render('Square_mandal.html')
   })
+  .get('/make1', (req,res)=>{
+    res.render('make1.html');
+  })
 }

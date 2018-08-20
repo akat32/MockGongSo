@@ -85,19 +85,19 @@ a{
   border-radius: 2em;
 }
 .facebook{
-  background-image: url('http://iwin247.kr:3321/img/facebook.png');
+  background-image: url('/img/facebook.png');
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 2.5vh;
 }
 .google{
-  background-image: url('http://iwin247.kr:3321/img/google.png');
+  background-image: url('/img/google.png');
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 2.5vh;
 }
 .kakaotalk{
-  background-image: url('http://iwin247.kr:3321/img/kakao.png');
+  background-image: url('/img/kakao.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
