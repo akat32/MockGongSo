@@ -69,7 +69,9 @@ body{
   display: flex;
 }
 .page1_icon{
-  background: #677e52;
+  background-image: url('/img/icon1ldpi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 4.8vh;
   height: 4.8vh;
   margin: auto;
@@ -77,7 +79,9 @@ body{
   margin-bottom: auto;
 }
 .page2_icon{
-  background: #677e52;
+  background-image: url('/img/icon2ldpi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 4.8vh;
   height: 4.8vh;
   margin: auto;
@@ -85,7 +89,9 @@ body{
   margin-bottom: auto;
 }
 .page3_icon{
-  background: #677e52;
+  background-image: url('/img/icon3ldpi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 4.8vh;
   height: 4.8vh;
   margin: auto;
@@ -93,7 +99,9 @@ body{
   margin-bottom: auto;
 }
 .page4_icon{
-  background: #677e52;
+  background-image: url('/img/icon4ldpi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 4.8vh;
   height: 4.8vh;
   margin: auto;

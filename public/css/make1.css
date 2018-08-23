@@ -3,6 +3,7 @@
 body{
   margin:0;
   background: #e2e2e2;
+  position: relative;
 }
 input{
   -webkit-appearance: none;
@@ -61,6 +62,17 @@ input{
   text-align: center;
   border : 0.1vh solid #677e52;
   color:#677e52;
+  font-size: 2.5vh;
+}
+.arrow{
+  position: absolute;
+  left: 90vw;
+  top: 26vh;
+  width: 3vh;
+  height: 5vh;
+  background-image: url('/img/rightldpi.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .inputBox{
   width: 52vw;

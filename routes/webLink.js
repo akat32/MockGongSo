@@ -17,4 +17,16 @@ function test(app){
   .get('/make1', (req,res)=>{
     res.render('make1.html');
   })
+  .get('/make2', (req,res)=>{
+    res.render('make2.html')
+  })
+  .get('/make3', (req,res)=>{
+    res.render('make3.html')
+  })
+  .get('/make4', (req,res)=>{
+    res.render('make4.html')
+  })
+  .get('/mandalt', (req,res)=>{
+    res.render('Triangle_mandal.html');
+  })
 }
