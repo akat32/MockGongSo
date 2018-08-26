@@ -36,9 +36,11 @@ body{
   z-index: 100;
 }
 .Logo{
+  background-image: url('/img/logo2.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 14.6vh;
   height: 14.6vh;
-  background: #b7ca79;
   border-radius: 50%;
   margin : auto;
   margin-top: 16.7vh;
@@ -52,9 +54,10 @@ body{
 }
 .inputArea > input{
   margin-bottom: 3.8vh;
+  font-family: 'NotoSansCJKkr-Regular';
 }
 ::placeholder{
-  font-family: 'NotoSansCJKkr-Medium';
+  font-family: 'NotoSansCJKkr-Regular';
   font-size: 3.5vw;
   color:#000;
 }
