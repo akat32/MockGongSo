@@ -29,4 +29,7 @@ function test(app){
   .get('/mandalt', (req,res)=>{
     res.render('Triangle_mandal.html');
   })
+  .get('/register', (req,res)=>{
+    res.render('reg.html')
+  })
 }

@@ -1,27 +1,57 @@
 @font-face{font-family: 'NotoSansCJKkr-Medium'; src:url('/font/NotoSansCJKkr-Medium.otf');}
+@font-face{font-family: 'NotoSansCJKkr-Regular'; src:url('/font/NotoSansCJKkr-Regular.otf');}
 body{
   margin : 0;
   background:#e2e2e2;
+  position: relative;
+}
+.chuk{
+  width: 100%;
+  background: #e2e2e2;
+  height: 1px;
+}
+.back{
+  position: absolute;
+  left: 8.3vw;
+  top: -11.4vh;
+  width: 2.5vh;
+  height: 3.5vh;
+  background-image: url('/img/leftldpi.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+.title{
+  position: absolute;
+  font-family: 'NotoSansCJKkr-Regular';
+  font-size: 2.5vh;
+  text-align: center;
+  line-height: 3.5vh;
+  width: 18vw;
+  height: 3.5vh;
+  top: -11.4vh;
+  left: 0;
+  right: 0;
+  margin:auto;
+  z-index: 100;
 }
 .Logo{
-  width: 14.5vh;
-  height: 14.5vh;
+  width: 14.6vh;
+  height: 14.6vh;
   background: #b7ca79;
   border-radius: 50%;
   margin : auto;
-  margin-top: 12.7vh;
+  margin-top: 16.7vh;
 }
 .inputArea{
-  width: 58vw;
-  height: 12vh;
+  width: 60vw;
+  height: 34vh;
   margin:auto;
   margin-top : 9vh;
   margin-bottom: 4.5vh;
 }
-.id{
+.inputArea > input{
   margin-bottom: 3.8vh;
-}
-.passwd{
 }
 ::placeholder{
   font-family: 'NotoSansCJKkr-Medium';
@@ -44,9 +74,9 @@ a{
   color:#000;
   font-weight: bold;
 }
-.LoginBtn{
+.RegBtn{
   background: #b7ca79;
-  width: 60vw;
+  width: 62.6vw;
   height: 6vh;
   margin:auto;
   border-radius: 0.5em;
@@ -70,33 +100,4 @@ a{
 }
 .index{
   font-size: 1.9vh;
-}
-.social{
-  background: #e2e2e2;
-  width: 23vh;
-  height: 6vh;
-  margin:auto;
-  display: flex;
-}
-.social > div{
-  height: 6vh;
-  width: 6vh;
-  border-radius: 2em;
-}
-.facebook{
-  background-image: url('/img/facebook.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-right: 2.5vh;
-}
-.google{
-  background-image: url('/img/google.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-right: 2.5vh;
-}
-.kakaotalk{
-  background-image: url('/img/kakao.png');
-  background-repeat: no-repeat;
-  background-size: cover;
 }

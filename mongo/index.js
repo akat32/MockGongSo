@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 
-
 mongoose.connect('mongodb://localhost/MockSal');
 mongoose.Promise = global.Promise;
 
