@@ -9,18 +9,18 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () { console.log("Mongo On"); });
 
 var UsersSchema = mongoose.Schema({
-  id : {type : String}, // 테스트 용 아이디
-  passwd : {type : String}, // 테스트 용
+  id : {type : String}, // 유저 아이디
+  passwd : {type : String}, // 유저 비밀번호
   name : {type : String}, // 유저 이름
-  token : {type : String}, // 소셜 로그인 시 사용될 토큰
+  email : {type : String}, // 유저 이메일
+  token : {type : String}, // 소셜 로그인 시 사용될 토큰 혹은 자동로그인.
   pushNotifications : [{  // 푸쉬 알림
     time : {type : Date}
   }],
-  profileImage : {type : String}, // 프로필 사진
-  mandalArtTheme : [{  // 만다라트 테마
+  mandalArtTheme : [{  // 보유한 만다라트 테마
     themaCode : {type : String} // 테마 코드 (랜덤스트링)
   }],
-  userMandalArt : [{ //유저 만다라트
+  userMandalArt : { //유저 만다라트
     name : {type : String}, // 만다라트 이름
     goal : {type : String}, // 만다라트 목표
     mostWork : {type : String}, // 가장 많이 한 항목
@@ -46,10 +46,8 @@ var UsersSchema = mongoose.Schema({
         achievement : {type : Number, default : 0} // 성취도
       }]
     }]
-  }],
-  mandalCnt : {type : Number, default : 0}, // 현재 삼각형 만다라트 갯수
-  mandalMax : {type : Number, default : 3}, // 삼각형 만다라트 쵀대 갯수
-  triangleMandalArt : [{ // 삼각형 만다라트
+  },
+  triangleMandalArt : { // 삼각형 만다라트
     name : {type : String}, // 만다라트 이름
     goal : {type : String}, // 만다라트 목표
     isEnd : {type : String}, // 이거 끝남?
@@ -63,7 +61,7 @@ var UsersSchema = mongoose.Schema({
         achievement : {type : Number, default : 0} //작은 칸 성취도
       }]
     }]
-  }],
+  },
   targetAD : {
     name : {type : String}, // 광고 회사
     title : {type : String}, // 광고 제목

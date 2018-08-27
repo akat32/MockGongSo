@@ -24,6 +24,7 @@ var config = {
 var FBapp = firebase.initializeApp(config);
 
 
+let passport = require('./passport')(Users);
 
 const PORT = 3321;
 app.listen(PORT, ()=>{
@@ -31,7 +32,5 @@ app.listen(PORT, ()=>{
 })
 
 
-
-
 require('./routes/webLink')(app);
-require('./routes/auth/auth')(app, Users, firebase);
+require('./routes/auth/auth')(app, Users,passport, firebase);
