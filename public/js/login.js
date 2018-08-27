@@ -1,9 +1,9 @@
 
 function login(){
-  var userId = $('.id').val();
+  var userEmail = $('.email').val();
   var userPasswd = $('.passwd').val();
   axios.post('/signinWeb', {
-    id : userId,
+    email : userEmail,
     passwd : userPasswd
   })
   .then((response)=>{

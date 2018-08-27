@@ -2,15 +2,18 @@
 function register(){
   var userName = $('.name').val();
   var userEmail = $('.email').val();
-  var userId = $('.id').val();
   var userPasswd = $('.passwd').val();
+  var CPasswd = $('.confirmPasswd').val();
+  if(userPasswd != CPasswd){
+    alert('비밀번호가 맞지 않습니다!')
+    return false;
+  }
   axios.post('/signup', {
     name : userName,
     email : userEmail,
-    id : userId,
     passwd : userPasswd
   })
-  .then((response)=>
+  .then((response)=>{
     location.replace('/login');
   })
   .catch((err)=>{
