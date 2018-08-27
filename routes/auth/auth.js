@@ -12,6 +12,11 @@ function auth(app, Users, passport, firebase, rndstring){
       return res.status(200).json({message : "Success!"});
     })(req, res, next)
   })
+  .post('/signin', async(req,res)=>{
+    var result = await Users.findOne({id : req.body.id, passwd : req.body.passwd})
+    if(!result) return res.status(404).json({message : "User Not Found"})
+    else return res.status(200).json({message : "Success!"});
+  })
   .post('/signup', async(req,res)=>{
     var user = new Users(req.body);
     user.token = rndstring.generate(25);
