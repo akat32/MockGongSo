@@ -5,7 +5,6 @@ import bodyParser from 'body-parser'
 import path from 'path'
 import firebase from 'firebase'
 //mockgongso.firebaseapp.com
-import {Users, Shop} from './mongo';
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({limit: '1gb', extended: false }));
@@ -15,6 +14,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+import {Users, Shop} from './mongo';
 require('./func')
 
 var config = {
@@ -33,4 +33,4 @@ app.listen(PORT, ()=>{
 
 
 require('./routes/webLink')(app);
-require('./routes/auth/auth')(app, Users,passport, firebase);
+require('./routes/auth/auth')(app, Users, passport, firebase, rndstring);

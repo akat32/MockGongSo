@@ -9,7 +9,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () { console.log("Mongo On"); });
 
 var UsersSchema = mongoose.Schema({
-  id : {type : String}, // 유저 아이디
+  id : {type : String, unique : true}, // 유저 아이디
   passwd : {type : String}, // 유저 비밀번호
   name : {type : String}, // 유저 이름
   email : {type : String}, // 유저 이메일
@@ -86,6 +86,7 @@ var ShopSchema = mongoose.Schema({
 var Users = mongoose.model('users', UsersSchema);
 var Shop = mongoose.model('shop', ShopSchema);
 
+require('./err')(UsersSchema);
 
 export {Users, Shop};
 

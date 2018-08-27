@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>목공소</title>
+    <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/reg.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://unpkg.com/vue"></script>
@@ -19,7 +21,7 @@
       <input type="text" class = "id" placeholder="ID"/>
       <input type="password" class = "passwd" placeholder="Password"/>
     </div>
-    <div class = "RegBtn">가입하기</div>
+    <div class = "RegBtn" onclick="register();">가입하기</div>
 
   </body>
 </html>
