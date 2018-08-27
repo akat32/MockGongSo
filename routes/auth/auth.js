@@ -9,10 +9,15 @@ function auth(app, Users, passport, firebase, rndstring){
     res.status(200).json({message : "Success!"});
   })
   .post('/signin', async(req,res)=>{
-    var result = await Users.findOne({id : req.body.id, passwd : req.body.passwd})
+    var result = await Users.findOne({email : req.body.email, passwd : req.body.passwd})
     if(!result)
     return res.status(404).json({message : "User Not Found"})
     else return res.status(200).json({message : "Success!"});
+  })
+  .post('/duplicatechk', async(req,res)=>{
+    var result = await Users.findOne({email : req.body.email})
+    if(result) return res.status(409).json({message : "User duplicate"})
+    else return res.status(200).json({message : "Not duplicate"})
   })
   .post('/signup', async(req,res)=>{
     var user = new Users(req.body);

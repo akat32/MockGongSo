@@ -9,10 +9,9 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () { console.log("Mongo On"); });
 
 var UsersSchema = mongoose.Schema({
-  id : {type : String, unique : true}, // 유저 아이디
+  email : {type : String, unique : true}, // 유저 이메일 [ID 로 취급]
   passwd : {type : String}, // 유저 비밀번호
   name : {type : String}, // 유저 이름
-  email : {type : String}, // 유저 이메일
   token : {type : String}, // 소셜 로그인 시 사용될 토큰 혹은 자동로그인.
   pushNotifications : [{  // 푸쉬 알림
     time : {type : Date}

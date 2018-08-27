@@ -11,8 +11,6 @@
 
     email : User's E-mail ( 유저 이메일 )
 
-    id : User's ID ( 유저 아이디 )
-
     passwd : User's Password ( 유저 비밀번호 )
 
 > Response
@@ -24,11 +22,11 @@
     HTTP 409 : {message : "already exist"} (유저 중복)
 
 
-* POST /signip : User Signin (유저 로그인)
+* POST /signin : User Signin (유저 로그인)
 
 > Params
 
-    id : User's ID ( 유저 아이디 )
+    email : User's E-mail ( 유저 이메일 )
 
     passwd : User's Password ( 유저 비밀번호 )
 
@@ -37,3 +35,16 @@
     HTTP 200 : {message : "Success!"}
 
     HTTP 404 : {message : "User Not Found"}
+
+
+* POST /duplicatechk : User Signin (유저 로그인)
+
+> Params
+
+    email : User's email ( 유저 이메일 )
+
+> Response
+
+    HTTP 200 : {message : "Not duplicate"}
+
+    HTTP 409 : {message : "User duplicate"}
