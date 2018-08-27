@@ -6,6 +6,8 @@
     <link rel="stylesheet" href ="css/login.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://unpkg.com/vue"></script>
+    <link rel="shortcut icon" href="../img/logo1.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src = "js/login.js"></script>
   </head>
   <body>
@@ -14,9 +16,9 @@
       <input type="text" class = "id" placeholder="ID"/>
       <input type="password" class = "passwd" placeholder="Password"/>
     </div>
-    <div class = "LoginBtn">로그인</div>
+    <div class = "LoginBtn" onclick = "login();">로그인</div>
     <div class = "signText">
-      <span class = "index">계정이 없으신가요? <a href="/signup">회원가입하기</a></span>
+      <span class = "index">계정이 없으신가요? <a href="/register">회원가입하기</a></span>
     </div>
     <div class = "textSocial">소셜로그인</div>
     <div class = "social">
