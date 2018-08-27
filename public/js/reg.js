@@ -10,10 +10,10 @@ function register(){
     id : userId,
     passwd : userPasswd
   })
-  .then((response)=>{
-    console.log(response)
+  .then((response)=>
+    location.replace('/login');
   })
   .catch((err)=>{
-    console.log(err.message)
+    alert('오류 발생!');
   })
 }

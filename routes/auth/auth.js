@@ -1,6 +1,6 @@
 module.exports = auth;
 
-function auth(app,Users,passport,firebase,rndstring){
+function auth(app, Users, passport, firebase, rndstring){
   app.use(passport.initialize());
   app.use(passport.session());
 

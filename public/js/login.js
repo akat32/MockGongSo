@@ -7,9 +7,9 @@ function login(){
     passwd : userPasswd
   })
   .then((response)=>{
-    console.log(response.message)
+    location.replace('/');
   })
   .catch((err)=>{
-    console.log(err.message)
+    alert('아이디나 비밀번호를 확인하세요')
   })
 }
