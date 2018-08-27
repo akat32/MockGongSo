@@ -5,16 +5,13 @@ function auth(app, Users, passport, firebase, rndstring){
   app.use(passport.session());
 
 
-  app.post('/signinWeb', async (req,res,next)=>{
-    passport.authenticate('local', (err,user,info)=>{
-      if (!user) { return res.status(404).json({message : "User Not Found"})}
-      if(err) { return res.status(500).json({message : "Server ERR!"})}
-      return res.status(200).json({message : "Success!"});
-    })(req, res, next)
+  app.post('/signinWeb', passport.authenticate('local', {failureRedirect: '/'}),(req, res) => {
+    res.status(200).json({message : "Success!"});
   })
   .post('/signin', async(req,res)=>{
     var result = await Users.findOne({id : req.body.id, passwd : req.body.passwd})
-    if(!result) return res.status(404).json({message : "User Not Found"})
+    if(!result)
+    return res.status(404).json({message : "User Not Found"})
     else return res.status(200).json({message : "Success!"});
   })
   .post('/signup', async(req,res)=>{
