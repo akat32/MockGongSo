@@ -19,6 +19,7 @@ var UsersSchema = mongoose.Schema({
   mandalArtTheme : [{  // 보유한 만다라트 테마
     themaCode : {type : String} // 테마 코드 (랜덤스트링)
   }],
+  MandalChk : {type : Boolean, default : false}, // 만다라트의 유무 체크
   userMandalArt : { //유저 만다라트
     name : {type : String}, // 만다라트 이름
     goal : {type : String}, // 만다라트 목표
@@ -46,6 +47,7 @@ var UsersSchema = mongoose.Schema({
       }]
     }]
   },
+  triangleMandalChk : {type : Boolean, default : false}, // 심긱형 만다라트의 유무 체크
   triangleMandalArt : { // 삼각형 만다라트
     name : {type : String}, // 만다라트 이름
     goal : {type : String}, // 만다라트 목표

@@ -33,12 +33,13 @@ var config = {
   authDomain: 'mockgongso.firebaseapp.com'
 }
 var FBapp = firebase.initializeApp(config);
-
-app.post('/isauth', (req,res)=>{
-
-});
-
 let passport = require('./passport')(Users);
+
+
+app.post('/isauth', (req, res, next)=>{
+  if (req.isAuthenticated()) res.status(200).json({message : "User Auth!"});
+  res.redirect('/auth/signin');
+});
 
 const PORT = 3321;
 app.listen(PORT, ()=>{
