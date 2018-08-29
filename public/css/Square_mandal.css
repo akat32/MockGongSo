@@ -25,7 +25,9 @@ body{
 .Logo{
   width: 20.6vh;
   height: 20.6vh;
-  background: #b7ca79;
+  background-image: url('/img/logo1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
   border-radius: 50%;
   margin:auto;
 }
@@ -48,13 +50,6 @@ body{
   font-size: 2.1vh;
   box-shadow: 0px 0.2vh 0 gray;
 }
-.bar{
-  background: #b7ca79;
-  position: absolute;
-  top: 89.3vh;
-  width: 25%;
-  height: 1.1vh;
-}
 .footer{
   position: absolute;
   bottom: 0;
@@ -66,76 +61,8 @@ body{
 .bar{
   background: #b7ca79;
   position: absolute;
-  top: 89.3vh;
+  top: 90.4vh;
   width: 20%;
-  height: 1.1vh;
-}
-.footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height:9.6vh;
-  background : #fff;
-  display: flex;
-}
-.LogoBtn{
-  width: 8vh;
-  height: 8vh;
-  border-radius: 50%;
-  border: 0.6vh solid #677e52;
-  position: absolute;
-  background-image: url('/img/mainldpi.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  left: calc(50vw - 4vh);
-  top: 87vh;
-  z-index: 1;
-}
-.footer > div{
-  width: 20%;
-  height: 100%;
-  display: flex;
-}
-.page2{
-  margin-right: 20vw;
-}
-.page1_icon{
-  background-image: url('/img/icon1ldpi.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 4.8vh;
-  height: 4.8vh;
-  margin: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.page2_icon{
-  background-image: url('/img/icon2ldpi.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 4.8vh;
-  height: 4.8vh;
-  margin: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.page3_icon{
-  background-image: url('/img/icon3ldpi.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 4.8vh;
-  height: 4.8vh;
-  margin: auto;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.page4_icon{
-  background-image: url('/img/icon4ldpi.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 4.8vh;
-  height: 4.8vh;
-  margin: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+  height: 0.7vh;
+  z-index: 100;
 }

@@ -63,6 +63,7 @@ input{
   border : 0.1vh solid #677e52;
   color:#677e52;
   font-size: 2.5vh;
+  line-height: 18.9vh;
 }
 .arrow{
   position: absolute;

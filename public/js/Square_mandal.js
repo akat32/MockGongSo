@@ -1,8 +1,7 @@
-function make(){
-  axios.post('/make', {
-    id : "akat32",
-    passwd : "qkrxodnr321!"
+async function make(){
+  var result = await axios.post('/makeBtn', {
+    id : "akat32"
   })
-  .then( response => { console.log(response); })
-  .catch( response =>{ console.log(response); })
+  if(result.status == 200) location.replace('/make1');
+  else location.replace('/login');
 }
