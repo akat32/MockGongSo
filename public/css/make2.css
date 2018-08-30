@@ -5,6 +5,10 @@ body{
   background: #e2e2e2;
   position: relative;
 }
+ul{
+  list-style:none;
+  padding:0;
+}
 input{
   -webkit-appearance: none;
   -webkit-border-radius: 0;

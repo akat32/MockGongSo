@@ -7,7 +7,7 @@ function login(){
     passwd : userPasswd
   })
   .then((response)=>{
-    location.replace('/mandals');
+    location.replace('/mandal');
   })
   .catch((err)=>{
     alert('아이디나 비밀번호를 확인하세요')

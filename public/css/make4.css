@@ -9,6 +9,10 @@ input{
   -webkit-appearance: none;
   -webkit-border-radius: 0;
 }
+ul{
+  list-style: none;
+  padding: 0;
+}
 .title{
   font-family: 'NotoSansCJKkr-Medium';
   width: 100%;

@@ -5,8 +5,8 @@
     <title>목공소</title>
     <link rel="stylesheet" href="css/make2.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <link rel="shortcut icon" href="../img/logo1.png">
     <script src = "js/make2.js"></script>
   </head>
@@ -26,7 +26,11 @@
         <input type="text" class = "index" placeholder="{{ item.index }}"/>
       </li>
     </ul> -->
-    <div class = "wish">바라는 회사 취직하기</div>
-    <div class = "plus">+</div>
+    <ul id = "wishList">
+      <li v-for="item in items">
+        <div class = "wish">{{ item.message }}</div>
+      </li>
+    </ul>
+    <div class = "plus" v-on:click="add">+</div>
   </body>
 </html>
