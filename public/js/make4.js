@@ -3,12 +3,16 @@ function back(){
 }
 async function go(){
   var mandalTitle = localStorage.getItem('mandalTitle');
-  console.log(mandalTitle)
   var result = await axios.post('/make', {
     title : mandalTitle
   })
-  console.log(result);
-  // location.replace('/mandal');
+  if(result.status == 500){
+    alert('세션이 만료되었습니다.   ')
+    location.replace('/login')
+  }
+  else if (result.status==200){
+    location.replace('/mandal');
+  }
 }
 window.onload = ()=>{
   var wishList = new Vue({
