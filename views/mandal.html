@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/mandal.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
     <link rel="shortcut icon" href="../img/logo1.png">
     <script src = "js/mandal.js"></script>
@@ -14,8 +15,8 @@
   <body>
     <div class = "title">만다라트</div>
     <div class = "mandalTitle">
-      <div class = "titleIndex">EDCAN 폐부 하기</div>
-      <div class = "achievement" >지금까지 94% 달성 중</div>
+      <div class = "titleIndex">{{title}}</div>
+      <div class = "achievement" >지금까지 {{achievement}}% 달성 </div>
     </div>
     <div class = "downBtn">
       <div class = "downImg"></div>

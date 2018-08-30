@@ -48,3 +48,4 @@ app.listen(PORT, ()=>{
 require('./routes/webLink')(app);
 require('./routes/auth/auth')(app, Users, passport, firebase, rndstring);
 require('./routes/mandal/new_mandalS')(app, passport, Users, rndstring);
+require('./routes/mandal/getMandal')(app, passport, Users, rndstring);
