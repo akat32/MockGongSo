@@ -54,12 +54,8 @@ var UsersSchema = mongoose.Schema({
     achievement : {type : Number, default : 0},
     themaCode : {type : String, default : "base"}, //테마 코드
     middleMandalArt : [{ // 중간 크기 만다라트
-      middleTitle : {type : String}, // 중간 칸 목표
+      middleTitle : {type : String, default : ""}, // 중간 칸 목표
       achievement : {type : Number, default : 0}, // 중간 칸 성취도
-      smallMandalArt : [{ // 작은 칸
-        title : {type : String}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} //작은 칸 성취도
-      }]
     }]
   },
   targetAD : {

@@ -2,7 +2,8 @@ window.onload = async ()=>{
   var mandalTitle = new Vue({
     el: '.mandalTitle',
     data:{
-      title : ''
+      title : '',
+      achievement : ''
     }
   })
   var result = await axios.post('/getTitle',{some : "thing"});
@@ -15,6 +16,7 @@ window.onload = async ()=>{
     location.replace('/login');
   }
   else if(result.status == 200){
-    mandalTitle.title = result.data.title;
+    mandalTitle.title = result.data.re.title;
+    mandalTitle.achievement = result.data.re.achievement;
   }
 }

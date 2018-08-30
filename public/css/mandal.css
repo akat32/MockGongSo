@@ -105,7 +105,7 @@ input{
 .Box1, .Box2, .Box3{
   width: 13vh;
   height: 13vh;
-  background-color: #fff;
+  background-color: #e2e2e2;
   border: 0.2vh solid #677e52;
 }
 .Box4, .Box5, .Box6{
