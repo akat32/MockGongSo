@@ -9,7 +9,9 @@ window.onload = ()=>{
     el: '#wishList',
     data: {
       items: [
-        {message : "화해하기"}
+        {message : "다리 운동하기"},
+        {message : "어깨 운동하기"},
+        {message : "배 운동하기"},
       ]
     }
   })
@@ -17,7 +19,7 @@ window.onload = ()=>{
     el: '.plus',
     methods: {
       add : ()=>{
-        console.log('1')
+        console.log(localStorage.getItem('mandalTitle'))
       }
     }
 

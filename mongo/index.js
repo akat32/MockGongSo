@@ -21,12 +21,11 @@ var UsersSchema = mongoose.Schema({
   }],
   MandalChk : {type : Boolean, default : false}, // 만다라트의 유무 체크
   userMandalArt : { //유저 만다라트
-    name : {type : String}, // 만다라트 이름
-    goal : {type : String}, // 만다라트 목표
-    mostWork : {type : String}, // 가장 많이 한 항목
+    title : {type : String}, // 만다라트 이름
+    mostWork : {type : String, default : ""}, // 가장 많이 한 항목
     achievement : {type : Number, default : 0}, // 성취도
-    startDay : {type : Date}, //시작일
-    endDay : {type : Date}, // 종료일
+    startDay : {type : String}, //시작일
+    endDay : {type : String}, // 종료일
     isEnd : {type : Boolean, default : false}, // 이거 종료됨?
     themaCode : {type : String, default : "base"}, // 테마
     userDiary : [{ // 유저 일기
@@ -39,10 +38,10 @@ var UsersSchema = mongoose.Schema({
       index : {type : String} // 내용
     }],
     middleMandalArt : [{ // 3 * 3 칸 짜리 만다라트 칸
-      middleTitle : {type : String}, // 중간 칸 목표
+      middleTitle : {type : String, default : ""}, // 중간 칸 목표
       achievement : {type : Number, default : 0}, // 성취도
       smallMandalArt : [{ // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String}, // 작은 칸 목표
+        title : {type : String, default : ""}, // 작은 칸 목표
         achievement : {type : Number, default : 0} // 성취도
       }]
     }]
