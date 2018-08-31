@@ -40,10 +40,38 @@ var UsersSchema = mongoose.Schema({
     middleMandalArt : [{ // 3 * 3 칸 짜리 만다라트 칸
       middleTitle : {type : String, default : ""}, // 중간 칸 목표
       achievement : {type : Number, default : 0}, // 성취도
-      smallMandalArt : [{ // 9 * 9 칸 짜리 작은 만다라트 칸
+      smallMandalArt1 : { // 9 * 9 칸 짜리 작은 만다라트 칸
         title : {type : String, default : ""}, // 작은 칸 목표
         achievement : {type : Number, default : 0} // 성취도
-      }]
+      },
+      smallMandalArt2 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+        title : {type : String, default : ""}, // 작은 칸 목표
+        achievement : {type : Number, default : 0} // 성취도
+      },
+      smallMandalArt3 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+        title : {type : String, default : ""}, // 작은 칸 목표
+        achievement : {type : Number, default : 0} // 성취도
+      },
+      smallMandalArt4 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+        title : {type : String, default : ""}, // 작은 칸 목표
+        achievement : {type : Number, default : 0} // 성취도
+      },
+      smallMandalArt5 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+        title : {type : String, default : ""}, // 작은 칸 목표
+        achievement : {type : Number, default : 0} // 성취도
+      },
+      smallMandalArt6 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+        title : {type : String, default : ""}, // 작은 칸 목표
+        achievement : {type : Number, default : 0} // 성취도
+      },
+      smallMandalArt7 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+        title : {type : String, default : ""}, // 작은 칸 목표
+        achievement : {type : Number, default : 0} // 성취도
+      },
+      smallMandalArt8 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+        title : {type : String, default : ""}, // 작은 칸 목표
+        achievement : {type : Number, default : 0} // 성취도
+      }
     }]
   },
   triangleMandalChk : {type : Boolean, default : false}, // 심긱형 만다라트의 유무 체크

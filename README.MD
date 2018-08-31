@@ -48,3 +48,17 @@
     HTTP 200 : {message : "Not duplicate"}
 
     HTTP 409 : {message : "User duplicate"}
+
+* POST /mandalChk/app : User Mandal Chk ( 유저 만다라트 유무 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+> Response
+
+    HTTP 200 : {mandal : MandalArt Json} ( mongo/index.js의 유저 스키마 userMandalArt)
+
+    HTTP 204 : {message : "User dosen't have MandalArt"}
+
+    HTTP 404 : {message : "User Not Found!"}
