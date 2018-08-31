@@ -26,4 +26,7 @@ function test(app){
   .get('/register', (req,res)=>{
     res.render('reg.html')
   })
+  .get('/shop',(req,res)=>{
+    res.render('shop.html');
+  })
 }

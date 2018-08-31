@@ -1,7 +1,7 @@
 {
-  "name": "2018satc",
+  "name": "MockGongso",
   "version": "1.0.0",
-  "description": "",
+  "description": "2018 STAC 생활부문",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js --exec babel-node",
@@ -29,5 +29,13 @@
     "babel-register": "^6.26.0",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akat32/MockGongSo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/akat32/MockGongSo/issues"
+  },
+  "homepage": "https://github.com/akat32/MockGongSo#readme"
 }

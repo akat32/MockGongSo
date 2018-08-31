@@ -7,7 +7,7 @@ function goPage2(){
 }
 
 function goPage3(){
-
+  location.replace('/shop')
 }
 
 function goPage4(){
