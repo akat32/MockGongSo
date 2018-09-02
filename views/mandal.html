@@ -42,19 +42,19 @@
     </div>
     <div class = "mandal">
       <div class = "mandalLine1">
-        <div class = "Box1" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box2" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box3" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box1" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box2" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box3" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
       </div>
       <div class = "mandalLine2">
-        <div class = "Box4" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box5" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box6" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box4" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box5" v-on:click = "goDown"></div>
+        <div class = "Box6" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
       </div>
       <div class = "mandalLine3">
-        <div class = "Box7" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box8" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box9" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box7" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box8" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box9" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
       </div>
     </div>
   </body>
