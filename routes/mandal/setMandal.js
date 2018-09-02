@@ -16,7 +16,7 @@ function setMandal(app, passport, Users, rndstring){
     return res.status(200).json({message : "success!"});
   })
   .post('/set/app', async(req,res)=>{
-
+    
   })
 }
 

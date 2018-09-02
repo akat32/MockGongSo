@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>목공소</title>
+    <link rel="stylesheet" href="css/downMandal.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="shortcut icon" href="../img/logo1.png">
+    <script src = "js/downMandal.js"></script>
+    <script src = "js/footer.js"></script>
+  </head>
+  <body>
+    <div class = "title">만다라트</div>
+    <div class = "mandalTitle">
+      <div class = "titleIndex">{{title}}</div>
+      <div class = "achievement">1     >     2</div>
+    </div>
+    <div class = "downBtn">
+      <div class = "downImg"></div>
+    </div>
+    <div class = "writeBtn"></div>
+    <div class = "bar"></div>
+    <div class = "LogoBtn" onclick = "goHome();">
+      <div class = "LogoImg"></div>
+    </div>
+    <div class = "footer">
+      <div class = "page1" onclick = "goPage1();">
+        <div class = "page1_icon"></div>
+      </div>
+      <div class = "page2" onclick = "goPage2();">
+        <div class = "page2_icon"></div>
+      </div>
+      <div class = "page3" onclick = "goPage3();">
+        <div class = "page3_icon"></div>
+      </div>
+      <div class = "page4" onclick = "goPage4();">
+        <div class = "page4_icon"></div>
+      </div>
+    </div>
+    <div class = "mandal">
+      <div class = "mandalLine1">
+        <div class = "Box1" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box2" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box3" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+      </div>
+      <div class = "mandalLine2">
+        <div class = "Box4" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box5" onclick = "goUP()"></div>
+        <div class = "Box6" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+      </div>
+      <div class = "mandalLine3">
+        <div class = "Box7" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box8" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box9" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+      </div>
+    </div>
+  </body>
+</html>

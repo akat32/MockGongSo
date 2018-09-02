@@ -14,7 +14,8 @@ window.onload = async ()=>{
     },
     methods:{
       goDown : (event)=>{
-        alert('헤헷')
+        localStorage.setItem('middleNum', 1);
+        location.replace('/downmandal');
       }
     }
   })
@@ -26,7 +27,8 @@ window.onload = async ()=>{
     },
     methods:{
       goDown : (event)=>{
-        alert('헤헷')
+        localStorage.setItem('middleNum', 2);
+        location.replace('/downmandal');
       }
     }
   })
@@ -38,7 +40,8 @@ window.onload = async ()=>{
     },
     methods:{
       goDown : (event)=>{
-        alert('헤헷')
+        localStorage.setItem('middleNum', 3);
+        location.replace('/downmandal');
       }
     }
   })
@@ -50,7 +53,8 @@ window.onload = async ()=>{
     },
     methods:{
       goDown : (event)=>{
-        alert('헤헷')
+        localStorage.setItem('middleNum', 4);
+        location.replace('/downmandal');
       }
     }
   })
@@ -62,7 +66,8 @@ window.onload = async ()=>{
     },
     methods:{
       goDown : (event)=>{
-        alert('헤헷')
+        localStorage.setItem('middleNum', 5);
+        location.replace('/downmandal');
       }
     }
   })
@@ -74,7 +79,8 @@ window.onload = async ()=>{
     },
     methods:{
       goDown : (event)=>{
-        alert('헤헷')
+        localStorage.setItem('middleNum', 6);
+        location.replace('/downmandal');
       }
     }
   })
@@ -86,7 +92,8 @@ window.onload = async ()=>{
     },
     methods:{
       goDown : (event)=>{
-        alert('헤헷')
+        localStorage.setItem('middleNum', 7);
+        location.replace('/downmandal');
       }
     }
   })
@@ -98,7 +105,8 @@ window.onload = async ()=>{
     },
     methods:{
       goDown : (event)=>{
-        alert('헤헷')
+        localStorage.setItem('middleNum', 8);
+        location.replace('/downmandal');
       }
     }
   })

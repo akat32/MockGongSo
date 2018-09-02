@@ -29,4 +29,7 @@ function test(app){
   .get('/shop',(req,res)=>{
     res.render('shop.html');
   })
+  .get('/downMandal', (req,res)=>{
+    res.render('downMandal.html')
+  })
 }
