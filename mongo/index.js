@@ -27,65 +27,66 @@ var UsersSchema = mongoose.Schema({
     startDay : {type : String}, //시작일
     endDay : {type : String}, // 종료일
     isEnd : {type : Boolean, default : false}, // 이거 종료됨?
-    themaCode : {type : String, default : "base"}, // 테마
-    userDiary : [{ // 유저 일기
-      title : {type : String, default : "제목"}, // 일기 제목
-      date : {type : Date}, // 일기 쓴 날짜
-      diary : {type : String} // 일기
-    }],
-    mandalLog : [{
-      date : {type : Date}, // 로그 찍힌 날짜
-      index : {type : String} // 내용
-    }],
-    middleMandalArt : [{ // 3 * 3 칸 짜리 만다라트 칸
-      middleTitle : {type : String, default : ""}, // 중간 칸 목표
-      achievement : {type : Number, default : 0}, // 성취도
-      smallMandalArt1 : { // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String, default : ""}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} // 성취도
-      },
-      smallMandalArt2 : { // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String, default : ""}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} // 성취도
-      },
-      smallMandalArt3 : { // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String, default : ""}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} // 성취도
-      },
-      smallMandalArt4 : { // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String, default : ""}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} // 성취도
-      },
-      smallMandalArt5 : { // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String, default : ""}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} // 성취도
-      },
-      smallMandalArt6 : { // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String, default : ""}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} // 성취도
-      },
-      smallMandalArt7 : { // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String, default : ""}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} // 성취도
-      },
-      smallMandalArt8 : { // 9 * 9 칸 짜리 작은 만다라트 칸
-        title : {type : String, default : ""}, // 작은 칸 목표
-        achievement : {type : Number, default : 0} // 성취도
-      }
-    }]
+    themaCode : {type : String, default : "base"} // 테마
   },
+  middleMandalArt : [{ // 3 * 3 칸 짜리 만다라트 칸
+    order : {type : Number}, // 배열 순서
+    middleTitle : {type : String, default : ""}, // 중간 칸 목표
+    achievement : {type : Number, default : 0}, // 성취도
+    smallMandalArt1 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+      title : {type : String, default : ""}, // 작은 칸 목표
+      achievement : {type : Number, default : 0} // 성취도
+    },
+    smallMandalArt2 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+      title : {type : String, default : ""}, // 작은 칸 목표
+      achievement : {type : Number, default : 0} // 성취도
+    },
+    smallMandalArt3 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+      title : {type : String, default : ""}, // 작은 칸 목표
+      achievement : {type : Number, default : 0} // 성취도
+    },
+    smallMandalArt4 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+      title : {type : String, default : ""}, // 작은 칸 목표
+      achievement : {type : Number, default : 0} // 성취도
+    },
+    smallMandalArt5 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+      title : {type : String, default : ""}, // 작은 칸 목표
+      achievement : {type : Number, default : 0} // 성취도
+    },
+    smallMandalArt6 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+      title : {type : String, default : ""}, // 작은 칸 목표
+      achievement : {type : Number, default : 0} // 성취도
+    },
+    smallMandalArt7 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+      title : {type : String, default : ""}, // 작은 칸 목표
+      achievement : {type : Number, default : 0} // 성취도
+    },
+    smallMandalArt8 : { // 9 * 9 칸 짜리 작은 만다라트 칸
+      title : {type : String, default : ""}, // 작은 칸 목표
+      achievement : {type : Number, default : 0} // 성취도
+    }
+  }],
+  mandalLog : [{
+    date : {type : Date}, // 로그 찍힌 날짜
+    index : {type : String} // 내용
+  }],
+  userDiary : [{ // 유저 일기
+    title : {type : String, default : "제목"}, // 일기 제목
+    date : {type : Date}, // 일기 쓴 날짜
+    diary : {type : String} // 일기
+  }],
   triangleMandalChk : {type : Boolean, default : false}, // 심긱형 만다라트의 유무 체크
   triangleMandalArt : { // 삼각형 만다라트
     name : {type : String}, // 만다라트 이름
     goal : {type : String}, // 만다라트 목표
     isEnd : {type : String}, // 이거 끝남?
     achievement : {type : Number, default : 0},
-    themaCode : {type : String, default : "base"}, //테마 코드
-    middleMandalArt : [{ // 중간 크기 만다라트
-      middleTitle : {type : String, default : ""}, // 중간 칸 목표
-      achievement : {type : Number, default : 0}, // 중간 칸 성취도
-    }]
+    themaCode : {type : String, default : "base"} //테마 코드
   },
+  triangleMiddleMandalArt : [{ // 중간 크기 만다라트
+    middleTitle : {type : String, default : ""}, // 중간 칸 목표
+    achievement : {type : Number, default : 0}, // 중간 칸 성취도
+  }],
   targetAD : {
     name : {type : String}, // 광고 회사
     title : {type : String}, // 광고 제목

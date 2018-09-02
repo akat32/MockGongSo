@@ -10,6 +10,13 @@ async function go(){
     alert('세션이 만료되었습니다.   ')
     location.replace('/login')
   }
+  result = await axios.post('/set', {
+    title : mandalTitle
+  })
+  if(result.status == 500){
+    alert('세션이 만료되었습니다.')
+    location.replace('/login')
+  }
   else if (result.status==200){
     location.replace('/mandal');
   }
