@@ -50,6 +50,49 @@ input{
 }
 
 .mandal{
+  width: 42vh;
+  height: calc((2 * 1.732* 10vh) + 2vh);
+  margin : auto;
+  margin-top: 7.1vh;
+}
+.tri1_border, .tri2_border, .tri3_border{
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style:solid;
+  border-color: transparent transparent #b7ca79;
+  border-width: 0 10vh calc(1.732 * 10vh) 10vh;
+}
+.tri1_border{
+  margin:auto;
+  margin-bottom: 1.7vh;
+}
+.tri_line{
+  display: flex;
+}
+.tri2_border{
+  margin-right: 2vh;
+}
+.triMain_border{
+  position: absolute;
+  border-right: 10vh solid transparent;
+  border-left: 10vh solid transparent;
+  border-top: calc(1.732 * 10vh) solid #677e52;
+  margin-left: 11vh;
+  margin-top: -0.6vh;
+}
+.tri1_border, .tri2_border, .tri3_border{
+  position: relative;
+  width: 0;
+  height: 0;
+  border-style:solid;
+  border-style:solid;
+  border-color: transparent transparent #677e52;
+  border-width: 0 10.5vh calc(1.732 * 10.5vh) 10.5vh;
+}
+
+
+/* .mandal{
   width: 44vh;
   height: calc( calc(Math.sqrt(21vh) * 2) + 2vh);
   margin : auto;
@@ -101,4 +144,4 @@ input{
   right: 0;
   top:-0.8vh;
   margin : auto;
-}
+} */
