@@ -19,16 +19,27 @@ function setMandal(app, passport, Users, rndstring){
     if (!req.isAuthenticated()) res.status(401).json({message : "User Not Authed!"});
     var user = await Users.findOne({token : req.user.token})
     if(!user) return res.status(404).json({message : "User Not Found!"})
-    var order = req.body.order - 1;
-    var mandal = user.middleMandalArt[order+1];
+    var order = req.body.order;
+    var mandal = user.middleMandalArt[order];
     mandal.middleTitle = req.body.title;
-    var result = await Users.update({token : user.token}, {$pop : {middleMandalArt : order}})
+    var result = await Users.update({token : user.token}, {$pull : {middleMandalArt : {order : order}}})
     if(!result.ok) return res.status(500).json({message : "ERR!"})
     var result = await Users.update({token : user.token}, {$push : {middleMandalArt : mandal}})
     if(!result.ok) return res.status(500).json({message : "ERR!"})
+    result = await Users.update({token : user.token},{
+      $push : {middleMandalArt:
+        {$each : [],
+        $sort : {order : 1}}
+      }
+    })
+    if(!result.ok) return res.status(500).json({message : "ERR!"})
+    else return res.status(200).json({message : "success!"})
     return res.status(200).json({message : "success!"})
   })
   .post('/set/app', async(req,res)=>{
+
+  })
+  .post('/mandalsort', async(req,res)=>{
 
   })
 }

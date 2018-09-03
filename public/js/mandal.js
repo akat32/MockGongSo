@@ -17,6 +17,7 @@ window.onload = async ()=>{
         if(mandal1.isActive){
           localStorage.setItem('middleNum', 1);
           location.replace('/downmandal');
+          return;
         }
         let mtitle = prompt("2단계 만다라트의 제목을 입력하세요!")
         if(mtitle === null) alert('다시 입력해주세요!')
@@ -47,8 +48,9 @@ window.onload = async ()=>{
     methods:{
       goDown : async (event)=>{
         if(mandal2.isActive){
-          localStorage.setItem('middleNum', 1);
+          localStorage.setItem('middleNum', 2);
           location.replace('/downmandal');
+          return;
         }
         let mtitle = prompt("2단계 만다라트의 제목을 입력하세요!")
         if(mtitle === null) alert('다시 입력해주세요!')
@@ -58,7 +60,7 @@ window.onload = async ()=>{
             order : 1
           })
           if( result.status == 200){
-            localStorage.setItem('middleNum', 1);
+            localStorage.setItem('middleNum', 2);
             location.replace('/downmandal');
           }
           else {
@@ -79,8 +81,9 @@ window.onload = async ()=>{
     methods:{
       goDown : async (event)=>{
         if(mandal3.isActive){
-          localStorage.setItem('middleNum', 1);
+          localStorage.setItem('middleNum', 3);
           location.replace('/downmandal');
+          return;
         }
         let mtitle = prompt("2단계 만다라트의 제목을 입력하세요!")
         if(mtitle === null) alert('다시 입력해주세요!')
@@ -90,7 +93,7 @@ window.onload = async ()=>{
             order : 2
           })
           if( result.status == 200){
-            localStorage.setItem('middleNum', 1);
+            localStorage.setItem('middleNum', 3);
             location.replace('/downmandal');
           }
           else {
@@ -111,8 +114,9 @@ window.onload = async ()=>{
     methods:{
       goDown : async (event)=>{
         if(mandal4.isActive){
-          localStorage.setItem('middleNum', 1);
+          localStorage.setItem('middleNum', 4);
           location.replace('/downmandal');
+          return;
         }
         let mtitle = prompt("2단계 만다라트의 제목을 입력하세요!")
         if(mtitle === null) alert('다시 입력해주세요!')
@@ -122,7 +126,7 @@ window.onload = async ()=>{
             order : 3
           })
           if( result.status == 200){
-            localStorage.setItem('middleNum', 1);
+            localStorage.setItem('middleNum', 4);
             location.replace('/downmandal');
           }
           else {
@@ -143,8 +147,9 @@ window.onload = async ()=>{
     methods:{
       goDown : async (event)=>{
         if(mandal5.isActive){
-          localStorage.setItem('middleNum', 1);
+          localStorage.setItem('middleNum', 5);
           location.replace('/downmandal');
+          return;
         }
         let mtitle = prompt("2단계 만다라트의 제목을 입력하세요!")
         if(mtitle === null) alert('다시 입력해주세요!')
@@ -154,7 +159,7 @@ window.onload = async ()=>{
             order : 4
           })
           if( result.status == 200){
-            localStorage.setItem('middleNum', 1);
+            localStorage.setItem('middleNum', 5);
             location.replace('/downmandal');
           }
           else {
@@ -175,8 +180,9 @@ window.onload = async ()=>{
     methods:{
       goDown : async (event)=>{
         if(mandal6.isActive){
-          localStorage.setItem('middleNum', 1);
+          localStorage.setItem('middleNum', 6);
           location.replace('/downmandal');
+          return;
         }
         let mtitle = prompt("2단계 만다라트의 제목을 입력하세요!")
         if(mtitle === null) alert('다시 입력해주세요!')
@@ -186,7 +192,7 @@ window.onload = async ()=>{
             order : 5
           })
           if( result.status == 200){
-            localStorage.setItem('middleNum', 1);
+            localStorage.setItem('middleNum', 6);
             location.replace('/downmandal');
           }
           else {
@@ -207,8 +213,9 @@ window.onload = async ()=>{
     methods:{
       goDown : async (event)=>{
         if(mandal7.isActive){
-          localStorage.setItem('middleNum', 1);
+          localStorage.setItem('middleNum', 7);
           location.replace('/downmandal');
+          return;
         }
         let mtitle = prompt("2단계 만다라트의 제목을 입력하세요!")
         if(mtitle === null) alert('다시 입력해주세요!')
@@ -218,7 +225,7 @@ window.onload = async ()=>{
             order : 6
           })
           if( result.status == 200){
-            localStorage.setItem('middleNum', 1);
+            localStorage.setItem('middleNum', 7);
             location.replace('/downmandal');
           }
           else {
@@ -239,8 +246,9 @@ window.onload = async ()=>{
     methods:{
       goDown : async (event)=>{
         if(mandal8.isActive){
-          localStorage.setItem('middleNum', 1);
+          localStorage.setItem('middleNum', 8);
           location.replace('/downmandal');
+          return;
         }
         let mtitle = prompt("2단계 만다라트의 제목을 입력하세요!")
         if(mtitle === null) alert('다시 입력해주세요!')
@@ -250,7 +258,7 @@ window.onload = async ()=>{
             order : 7
           })
           if( result.status == 200){
-            localStorage.setItem('middleNum', 1);
+            localStorage.setItem('middleNum', 8);
             location.replace('/downmandal');
           }
           else {
