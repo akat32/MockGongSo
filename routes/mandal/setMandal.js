@@ -15,8 +15,21 @@ function setMandal(app, passport, Users, rndstring){
     }
     return res.status(200).json({message : "success!"});
   })
+  .post('/setMiddle', async (req,res)=>{
+    if (!req.isAuthenticated()) res.status(401).json({message : "User Not Authed!"});
+    var user = await Users.findOne({token : req.user.token})
+    if(!user) return res.status(404).json({message : "User Not Found!"})
+    var order = req.body.order - 1;
+    var mandal = user.middleMandalArt[order+1];
+    mandal.middleTitle = req.body.title;
+    var result = await Users.update({token : user.token}, {$pop : {middleMandalArt : order}})
+    if(!result.ok) return res.status(500).json({message : "ERR!"})
+    var result = await Users.update({token : user.token}, {$push : {middleMandalArt : mandal}})
+    if(!result.ok) return res.status(500).json({message : "ERR!"})
+    return res.status(200).json({message : "success!"})
+  })
   .post('/set/app', async(req,res)=>{
-    
+
   })
 }
 

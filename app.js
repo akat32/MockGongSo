@@ -3,7 +3,7 @@ var app = express();
 import rndstring from 'randomstring'
 import bodyParser from 'body-parser'
 import path from 'path'
-import firebase from 'firebase'
+// import firebase from 'firebase'
 import cookieSession from 'cookie-session'
 import session from 'express-session'
 import sessionstore from 'sessionstore'
@@ -28,11 +28,11 @@ import {Users, Shop} from './mongo';
 require('./func')
 
 
-var config = {
-  apiKey: 'AIzaSyCPZ08oFZTxMvuIQE3AEZW71AM4Ri8aKQw',
-  authDomain: 'mockgongso.firebaseapp.com'
-}
-var FBapp = firebase.initializeApp(config);
+// var config = {
+//   apiKey: 'AIzaSyCPZ08oFZTxMvuIQE3AEZW71AM4Ri8aKQw',
+//   authDomain: 'mockgongso.firebaseapp.com'
+// }
+// var FBapp = firebase.initializeApp(config);
 let passport = require('./passport')(Users);
 
 
@@ -46,7 +46,7 @@ app.listen(PORT, ()=>{
   console.log('Server On!')
 })
 require('./routes/webLink')(app);
-require('./routes/auth/auth')(app, Users, passport, firebase, rndstring);
+require('./routes/auth/auth')(app, Users, passport, rndstring);
 require('./routes/mandal/new_mandalS')(app, passport, Users, rndstring);
 require('./routes/mandal/getMandal')(app, passport, Users, rndstring);
 require('./routes/mandal/setMandal')(app, passport, Users, rndstring);

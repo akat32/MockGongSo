@@ -1,6 +1,6 @@
 module.exports = auth;
 
-function auth(app, Users, passport, firebase, rndstring){
+function auth(app, Users, passport, rndstring){
   app.use(passport.initialize());
   app.use(passport.session());
 
@@ -12,7 +12,7 @@ function auth(app, Users, passport, firebase, rndstring){
     var result = await Users.findOne({email : req.body.email, passwd : req.body.passwd})
     if(!result)
     return res.status(404).json({message : "User Not Found"})
-    else return res.status(200).json({message : "Success!"});
+    else return res.status(200).json({token : result.token});
   })
   .post('/duplicatechk', async(req,res)=>{
     var result = await Users.findOne({email : req.body.email})
