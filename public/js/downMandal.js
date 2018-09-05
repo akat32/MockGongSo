@@ -5,9 +5,10 @@ function goUP(){
 
 window.onload = async ()=>{
   var mandal = new Vue({
-    el: '.titleIndex',
+    el: '.mandalTitle',
     data:{
-      title : ''
+      title : '',
+      subTitle : ''
     }
   })
   var Box1 = new Vue({
@@ -17,8 +18,13 @@ window.onload = async ()=>{
     },
     methods : {
       goDown : async ()=>{
-        localStorage.setItem('lowNum', 1);
-        location.replace('/lowestMandal')
+        if(Box1.isActive){
+          localStorage.setItem('lowNum', 1);
+          location.replace('/lowestMandal');
+        }
+        else {
+
+        }
       }
     }
   })
@@ -118,5 +124,6 @@ window.onload = async ()=>{
   var mandalNum = localStorage.getItem('middleNum');
   mandalNum = parseInt(mandalNum)
   // console.log(result.data.re.mandal[mandalNum-1].middleTitle);
-  mandal.title = result.data.re.mandal[mandalNum-1].middleTitle;
+  mandal.subTitle = result.data.re.mandal[mandalNum-1].middleTitle;
+  mandal.title = result.data.re.title
 }
