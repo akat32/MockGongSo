@@ -10,6 +10,102 @@ window.onload = async ()=>{
       title : ''
     }
   })
+  var Box1 = new Vue({
+    el: '.Box1',
+    data : {
+      isActive : false
+    },
+    methods : {
+      goDown : async ()=>{
+        localStorage.setItem('lowNum', 1);
+        location.replace('/lowestMandal')
+      }
+    }
+  })
+  var Box2 = new Vue({
+    el: '.Box2',
+    data : {
+      isActive : false
+    },
+    methods : {
+      goDown : async ()=>{
+        localStorage.setItem('lowNum', 2);
+        location.replace('/lowestMandal')
+      }
+    }
+  })
+  var Box3 = new Vue({
+    el: '.Box3',
+    data : {
+      isActive : false
+    },
+    methods : {
+      goDown : async ()=>{
+        localStorage.setItem('lowNum', 3);
+        location.replace('/lowestMandal')
+      }
+    }
+  })
+  var Box4 = new Vue({
+    el: '.Box4',
+    data : {
+      isActive : false
+    },
+    methods : {
+      goDown : async ()=>{
+        localStorage.setItem('lowNum', 4);
+        location.replace('/lowestMandal')
+      }
+    }
+  })
+  var Box5 = new Vue({
+    el: '.Box6',
+    data : {
+      isActive : false
+    },
+    methods : {
+      goDown : async ()=>{
+        localStorage.setItem('lowNum', 5);
+        location.replace('/lowestMandal')
+      }
+    }
+  })
+  var Box6 = new Vue({
+    el: '.Box7',
+    data : {
+      isActive : false
+    },
+    methods : {
+      goDown : async ()=>{
+        localStorage.setItem('lowNum', 6);
+        location.replace('/lowestMandal')
+      }
+    }
+  })
+  var Box7 = new Vue({
+    el: '.Box8',
+    data : {
+      isActive : false
+    },
+    methods : {
+      goDown : async ()=>{
+        localStorage.setItem('lowNum', 7);
+        location.replace('/lowestMandal')
+      }
+    }
+  })
+  var Box8 = new Vue({
+    el: '.Box9',
+    data : {
+      isActive : false
+    },
+    methods : {
+      goDown : async ()=>{
+        localStorage.setItem('lowNum', 8);
+        location.replace('/lowestMandal')
+      }
+    }
+  })
   var result = await axios.post('/getMandal', {some : "thing"})
   if(result.status == 404){
     alert('오류입니다!')

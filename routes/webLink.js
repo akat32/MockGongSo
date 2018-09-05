@@ -32,4 +32,7 @@ function test(app){
   .get('/downMandal', (req,res)=>{
     res.render('downMandal.html')
   })
+  .get('/lowestMandal', (req,res)=>{
+    res.render('lowestMandal.html')
+  })
 }
