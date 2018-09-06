@@ -24,7 +24,8 @@ function new_mandalS(app, passport, Users, rndstring){
     res.render('mandal.html');
   })
   .post('/make/app', async (req,res)=>{
-    console.log(req.body)
+    var mandal = JSON.parse(req.body)
+    console.log(mandal.middle)
     res.status(200).json({json : req.body});
   })
 }
