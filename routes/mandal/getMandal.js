@@ -21,4 +21,14 @@ function getMandal(app, passport, Users, rndstring){
     else if(result.MandalChk == false) return res.status(204).json({message : "User dosen't have MandalArt"})
     else return res.status(200).json({mandal : result.userMandalArt})
   })
+  app.post('/getMandal/app', async (req,res)=>{
+    var result = await Users.findOne({token : req.body.token})
+    if(!result) return res.status(404).json({message : "Not Found!"})
+    var re = {
+      title : result.userMandalArt.title,
+      achievement :  result.userMandalArt.achievement,
+      mandal : result.middleMandalArt
+    }
+    return res.status(200).json({re : re})
+  })
 }

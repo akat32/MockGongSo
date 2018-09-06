@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>목공소</title>
     <link rel="stylesheet" href="css/lowestMandal.css" />
+    <link rel="stylesheet" href="css/scroll.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
@@ -17,9 +18,6 @@
     <div class = "mandalTitle">
       <div class = "titleIndex">{{title}}</div>
       <div class = "achievement">{{subTitle}}</div>
-    </div>
-    <div class = "downBtn">
-      <div class = "downImg"></div>
     </div>
     <div class = "writeBtn"></div>
     <div class = "bar"></div>
@@ -42,20 +40,23 @@
     </div>
     <div class = "mandal">
       <div class = "mandalLine1">
-        <div class = "Box1" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box2" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box3" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box1" v-bind:class = "[{BoxWhite : isActive}, {BoxGreen : isClick}]"></div>
+        <div class = "Box2" v-bind:class = "[{BoxWhite : isActive}, {BoxGreen : isClick}]"></div>
+        <div class = "Box3" v-bind:class = "[{BoxWhite : isActive}, {BoxGreen : isClick}]"></div>
       </div>
       <div class = "mandalLine2">
-        <div class = "Box4" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box4" v-bind:class = "[{BoxWhite : isActive}, {BoxGreen : isClick}]"></div>
         <div class = "Box5" onclick = "goUP()"></div>
-        <div class = "Box6" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box6" v-bind:class = "[{BoxWhite : isActive}, {BoxGreen : isClick}]"></div>
       </div>
       <div class = "mandalLine3">
-        <div class = "Box7" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box8" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
-        <div class = "Box9" v-on:click = "goDown" v-bind:class = "{BoxWhite : isActive}"></div>
+        <div class = "Box7" v-bind:class = "[{BoxWhite : isActive}, {BoxGreen : isClick}]"></div>
+        <div class = "Box8" v-bind:class = "[{BoxWhite : isActive}, {BoxGreen : isClick}]"></div>
+        <div class = "Box9" v-bind:class = "[{BoxWhite : isActive}, {BoxGreen : isClick}]"></div>
       </div>
     </div>
+    <div class = "sliderBar">
+     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+   </div>
   </body>
 </html>

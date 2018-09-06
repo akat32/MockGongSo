@@ -23,7 +23,20 @@ window.onload = async ()=>{
           location.replace('/lowestMandal');
         }
         else {
-
+          let ltitle = prompt("3단계 만다라트의 제목을 입력하세요!")
+          if(ltitle === null || ltitle === '') alert('다시 입력해주세요!')
+          else{
+            let result = await axios.post('/setLow', {
+              middle : localStorage.getItem('middleNum'),
+              low : 1,
+              title : ltitle
+            })
+            if(result.status == 200){
+              localStorage.setItem('lowNum', 1);
+              location.replace('/lowestMandal');
+            }
+            else alert('에러!')
+          }
         }
       }
     }
@@ -35,8 +48,26 @@ window.onload = async ()=>{
     },
     methods : {
       goDown : async ()=>{
-        localStorage.setItem('lowNum', 2);
-        location.replace('/lowestMandal')
+        if(Box2.isActive){
+          localStorage.setItem('lowNum', 2);
+          location.replace('/lowestMandal');
+        }
+        else {
+          let ltitle = prompt("3단계 만다라트의 제목을 입력하세요!")
+          if(ltitle === null || ltitle === '') alert('다시 입력해주세요!')
+          else{
+            let result = await axios.post('/setLow', {
+              middle : localStorage.getItem('middleNum'),
+              low : 2,
+              title : ltitle
+            })
+            if(result.status == 200){
+              localStorage.setItem('lowNum', 2);
+              location.replace('/lowestMandal');
+            }
+            else alert('에러!')
+          }
+        }
       }
     }
   })
@@ -47,8 +78,26 @@ window.onload = async ()=>{
     },
     methods : {
       goDown : async ()=>{
-        localStorage.setItem('lowNum', 3);
-        location.replace('/lowestMandal')
+        if(Box3.isActive){
+          localStorage.setItem('lowNum', 3);
+          location.replace('/lowestMandal');
+        }
+        else {
+          let ltitle = prompt("3단계 만다라트의 제목을 입력하세요!")
+          if(ltitle === null || ltitle === '') alert('다시 입력해주세요!')
+          else{
+            let result = await axios.post('/setLow', {
+              middle : localStorage.getItem('middleNum'),
+              low : 3,
+              title : ltitle
+            })
+            if(result.status == 200){
+              localStorage.setItem('lowNum', 3);
+              location.replace('/lowestMandal');
+            }
+            else alert('에러!')
+          }
+        }
       }
     }
   })
@@ -59,8 +108,26 @@ window.onload = async ()=>{
     },
     methods : {
       goDown : async ()=>{
-        localStorage.setItem('lowNum', 4);
-        location.replace('/lowestMandal')
+        if(Box4.isActive){
+          localStorage.setItem('lowNum', 4);
+          location.replace('/lowestMandal');
+        }
+        else {
+          let ltitle = prompt("3단계 만다라트의 제목을 입력하세요!")
+          if(ltitle === null || ltitle === '') alert('다시 입력해주세요!')
+          else{
+            let result = await axios.post('/setLow', {
+              middle : localStorage.getItem('middleNum'),
+              low : 4,
+              title : ltitle
+            })
+            if(result.status == 200){
+              localStorage.setItem('lowNum', 4);
+              location.replace('/lowestMandal');
+            }
+            else alert('에러!')
+          }
+        }
       }
     }
   })
@@ -71,8 +138,26 @@ window.onload = async ()=>{
     },
     methods : {
       goDown : async ()=>{
-        localStorage.setItem('lowNum', 5);
-        location.replace('/lowestMandal')
+        if(Box5.isActive){
+          localStorage.setItem('lowNum', 5);
+          location.replace('/lowestMandal');
+        }
+        else {
+          let ltitle = prompt("3단계 만다라트의 제목을 입력하세요!")
+          if(ltitle === null || ltitle === '') alert('다시 입력해주세요!')
+          else{
+            let result = await axios.post('/setLow', {
+              middle : localStorage.getItem('middleNum'),
+              low : 5,
+              title : ltitle
+            })
+            if(result.status == 200){
+              localStorage.setItem('lowNum', 5);
+              location.replace('/lowestMandal');
+            }
+            else alert('에러!')
+          }
+        }
       }
     }
   })
@@ -83,8 +168,26 @@ window.onload = async ()=>{
     },
     methods : {
       goDown : async ()=>{
-        localStorage.setItem('lowNum', 6);
-        location.replace('/lowestMandal')
+        if(Box6.isActive){
+          localStorage.setItem('lowNum', 6);
+          location.replace('/lowestMandal');
+        }
+        else {
+          let ltitle = prompt("3단계 만다라트의 제목을 입력하세요!")
+          if(ltitle === null || ltitle === '') alert('다시 입력해주세요!')
+          else{
+            let result = await axios.post('/setLow', {
+              middle : localStorage.getItem('middleNum'),
+              low : 6,
+              title : ltitle
+            })
+            if(result.status == 200){
+              localStorage.setItem('lowNum', 6);
+              location.replace('/lowestMandal');
+            }
+            else alert('에러!')
+          }
+        }
       }
     }
   })
@@ -95,8 +198,26 @@ window.onload = async ()=>{
     },
     methods : {
       goDown : async ()=>{
-        localStorage.setItem('lowNum', 7);
-        location.replace('/lowestMandal')
+        if(Box7.isActive){
+          localStorage.setItem('lowNum', 7);
+          location.replace('/lowestMandal');
+        }
+        else {
+          let ltitle = prompt("3단계 만다라트의 제목을 입력하세요!")
+          if(ltitle === null || ltitle === '') alert('다시 입력해주세요!')
+          else{
+            let result = await axios.post('/setLow', {
+              middle : localStorage.getItem('middleNum'),
+              low : 7,
+              title : ltitle
+            })
+            if(result.status == 200){
+              localStorage.setItem('lowNum', 7);
+              location.replace('/lowestMandal');
+            }
+            else alert('에러!')
+          }
+        }
       }
     }
   })
@@ -107,8 +228,26 @@ window.onload = async ()=>{
     },
     methods : {
       goDown : async ()=>{
-        localStorage.setItem('lowNum', 8);
-        location.replace('/lowestMandal')
+        if(Box8.isActive){
+          localStorage.setItem('lowNum', 8);
+          location.replace('/lowestMandal');
+        }
+        else {
+          let ltitle = prompt("3단계 만다라트의 제목을 입력하세요!")
+          if(ltitle === null || ltitle === '') alert('다시 입력해주세요!')
+          else{
+            let result = await axios.post('/setLow', {
+              middle : localStorage.getItem('middleNum'),
+              low : 8,
+              title : ltitle
+            })
+            if(result.status == 200){
+              localStorage.setItem('lowNum', 8);
+              location.replace('/lowestMandal');
+            }
+            else alert('에러!')
+          }
+        }
       }
     }
   })
@@ -124,6 +263,14 @@ window.onload = async ()=>{
   var mandalNum = localStorage.getItem('middleNum');
   mandalNum = parseInt(mandalNum)
   // console.log(result.data.re.mandal[mandalNum-1].middleTitle);
-  mandal.subTitle = result.data.re.mandal[mandalNum-1].middleTitle;
-  mandal.title = result.data.re.title
+  mandal.title = result.data.re.mandal[mandalNum-1].middleTitle;
+  mandal.subTitle = result.data.re.title
+  if(result.data.re.mandal[mandalNum-1].smallMandalArt1.title != '') Box1.isActive = true;
+  if(result.data.re.mandal[mandalNum-1].smallMandalArt2.title != '') Box2.isActive = true;
+  if(result.data.re.mandal[mandalNum-1].smallMandalArt3.title != '') Box3.isActive = true;
+  if(result.data.re.mandal[mandalNum-1].smallMandalArt4.title != '') Box4.isActive = true;
+  if(result.data.re.mandal[mandalNum-1].smallMandalArt5.title != '') Box5.isActive = true;
+  if(result.data.re.mandal[mandalNum-1].smallMandalArt6.title != '') Box6.isActive = true;
+  if(result.data.re.mandal[mandalNum-1].smallMandalArt7.title != '') Box7.isActive = true;
+  if(result.data.re.mandal[mandalNum-1].smallMandalArt8.title != '') Box8.isActive = true;
 }
