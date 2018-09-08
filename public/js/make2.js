@@ -22,6 +22,5 @@ window.onload = ()=>{
         console.log(localStorage.getItem('mandalTitle'))
       }
     }
-
   })
 }

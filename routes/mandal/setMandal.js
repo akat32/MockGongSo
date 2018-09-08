@@ -13,7 +13,13 @@ function setMandal(app, passport, Users, rndstring){
       });
       if(!result.ok) return res.status(500).json({message : "ERR!"});
     }
-    return res.status(200).json({message : "success!"});
+    result = await Users.findOne({token : req.user.token});
+    var re = {
+      title : result.userMandalArt.title,
+      achievement :  result.userMandalArt.achievement,
+      mandal : result.middleMandalArt
+    }
+    return res.status(200).json(re);
   })
   .post('/setMiddle', async (req,res)=>{
     if (!req.isAuthenticated()) res.status(401).json({message : "User Not Authed!"});
@@ -33,8 +39,13 @@ function setMandal(app, passport, Users, rndstring){
       }
     })
     if(!result.ok) return res.status(500).json({message : "ERR!"})
-    else return res.status(200).json({message : "success!"})
-    return res.status(200).json({message : "success!"})
+    result = await Users.findOne({token : req.user.token});
+    var re = {
+      title : result.userMandalArt.title,
+      achievement :  result.userMandalArt.achievement,
+      mandal : result.middleMandalArt
+    }
+    return res.status(200).json(result)
   })
   .post('/setLow', async (req,res)=>{
     if (!req.isAuthenticated()) res.status(401).json({message : "User Not Authed!"});

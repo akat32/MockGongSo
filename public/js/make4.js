@@ -18,6 +18,7 @@ async function go(){
     location.replace('/login')
   }
   else if (result.status==200){
+    localStorage.setItem('mandal', JSON.stringify(result))
     location.replace('/mandal');
   }
 }

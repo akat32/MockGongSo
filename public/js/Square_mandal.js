@@ -1,7 +1,5 @@
 async function make(){
-  var result = await axios.post('/makeBtn', {
-    id : "akat32"
-  })
+  var result = JSON.parse(localStorage.getItem('mandal'))
   if(result.status == 200) location.replace('/make1');
   else location.replace('/login');
 }

@@ -252,6 +252,8 @@ window.onload = async ()=>{
     }
   })
   var result = await axios.post('/getMandal', {some : "thing"})
+  var mandal = JSON.parse(localStorage.getItem('mandal'))
+  console.log(mandal)
   if(result.status == 404){
     alert('오류입니다!')
     location.replace('/login');
