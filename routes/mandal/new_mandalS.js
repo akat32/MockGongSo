@@ -24,8 +24,17 @@ function new_mandalS(app, passport, Users, rndstring){
     res.render('mandal.html');
   })
   .post('/make/app', async (req,res)=>{
-    console.log(req.body)
-    console.log(typeof(req.body))
+    var mandal = JSON.stringify(req.body)
+    console.log('String' + mandal)
+    mandal = JSON.parse('Json' + mandal)
+    console.log(mandal)
     res.status(200).json({json : req.body.data});
   })
 }
+
+// { middle:
+//    [ { small: '[으, 졸려, , , , , , ]', title: '서브1' },
+//      { small: '[엄마, 수술, 걱정된다, , , , , ]', title: '서브2' },
+//      { small: '[으아, , , , , , , ]', title: '서브3' } ],
+//   title: '타이틀'
+// }
