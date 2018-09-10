@@ -20,9 +20,9 @@ app.use(cookieSession({
     maxAge: 1000 * 60 * 60 // 유효기간 1시간
   }
 }))
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
+// app.engine('html', require('ejs').renderFile);
 
 import {Users, Shop} from './mongo';
 require('./func')
@@ -36,16 +36,11 @@ require('./func')
 let passport = require('./passport')(Users);
 
 
-app.post('/isauth', (req, res, next)=>{
-  if (req.isAuthenticated()) res.status(200).json({message : "User Auth!"});
-  res.redirect('/auth/signin');
-});
-
 const PORT = 3321;
 app.listen(PORT, ()=>{
   console.log('Server On!')
 })
-require('./routes/webLink')(app);
+// require('./routes/webLink')(app);
 require('./routes/auth/auth')(app, Users, passport, rndstring);
 require('./routes/mandal/new_mandalS')(app, passport, Users, rndstring);
 require('./routes/mandal/getMandal')(app, passport, Users, rndstring);

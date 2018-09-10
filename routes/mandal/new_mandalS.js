@@ -24,17 +24,61 @@ function new_mandalS(app, passport, Users, rndstring){
     res.render('mandal.html');
   })
   .post('/make/app', async (req,res)=>{
-    var mandal = JSON.stringify(req.body)
-    console.log('String' + mandal)
-    mandal = JSON.parse('Json' + mandal)
-    console.log(mandal)
-    res.status(200).json({json : req.body.data});
-  })
+   console.log(req.body.middle[0].small);
+   var mandal = {
+     title : req.body.title,
+   }
+   var result = await Users.update({token : req.body.token},{$set : {MandalChk : true}})
+   if(!result.ok) return res.status(500).json({message : "ERR!"})
+   result = await Users.update({token : req.body.token}, {$set : {userMandalArt : mandal}});
+   if(!result.ok) return res.status(500).json({message : "ERR!"})
+   mandal = {};
+   for(var i = 0; req.body.middle[i] != null; i++){
+     mandal = {
+       order : i,
+       middleTitle : req.body.middle[i].title,
+       smallMandalArt1 : {
+         title : req.body.middle[i].small[0]
+       },
+       smallMandalArt2 : {
+         title : req.body.middle[i].small[1]
+       },
+       smallMandalArt3 : {
+         title : req.body.middle[i].small[2]
+       },
+       smallMandalArt4 : {
+         title : req.body.middle[i].small[3]
+       },
+       smallMandalArt5 : {
+         title : req.body.middle[i].small[4]
+       },
+       smallMandalArt6 : {
+         title : req.body.middle[i].small[5]
+       },
+       smallMandalArt7 : {
+         title : req.body.middle[i].small[6]
+       },
+       smallMandalArt8 : {
+         title : req.body.middle[i].small[7]
+       }
+     }
+     console.log(mandal)
+     var some  = await Users.update({token : req.body.token}, {$pull : {middleMandalArt : {order : i}}})
+     if(!some.ok) return res.status(500).json({message : "ERR!"});
+     some = await Users.update(
+       {"token" : req.body.token},
+       {$push : {middleMandalArt : mandal}
+     });
+     if(!some.ok) return res.status(500).json({message : "ERR!"});
+   }
+   result = await Users.update({token : req.body.token},{
+     $push : {middleMandalArt:
+       {$each : [],
+       $sort : {order : 1}}
+     }
+   })
+   if(!result.ok) return res.status(500).json({message : "ERR!"})
+   // result = await Users.update({token : req.body.token}, {$set : {}})
+   res.status(200).json({json : req.body.title});
+ })
 }
-
-// { middle:
-//    [ { small: '[으, 졸려, , , , , , ]', title: '서브1' },
-//      { small: '[엄마, 수술, 걱정된다, , , , , ]', title: '서브2' },
-//      { small: '[으아, , , , , , , ]', title: '서브3' } ],
-//   title: '타이틀'
-// }
