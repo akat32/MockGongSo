@@ -71,7 +71,7 @@
 
 > Params
 
-    token : User's token
+    token : User's token ( 유저 토큰 )
 
     order : Array Number ( 만다라트 배열 번호 )
 
@@ -88,3 +88,23 @@
     HTTP 404 : {message : "User Not Found!"}
 
     HTTP 500 : {message : "ERR!"}
+
+* POST /setLow/app : Low MandalArt ( 3단계 만다라트 제목 수정 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+    middle : Middle Array Num ( 2단계 만다라트의 배열 번호 )
+
+    low : Low Array Num ( 3단계 만다라트의 배열 번호)
+
+    title : Low MandalArt Title ( 3단계 만다라트 목표)
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 404 {message : "User Not Found!"}
+
+    HTTP 500 {message : "ERR!"}
