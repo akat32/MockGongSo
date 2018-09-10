@@ -32,7 +32,7 @@
 
 > Response
 
-    HTTP 200 : {message : "Success!"}
+    HTTP 200 : {token : User Token}
 
     HTTP 404 : {message : "User Not Found"}
 
