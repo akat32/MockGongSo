@@ -95,7 +95,7 @@
 
     HTTP 500 : {message : "ERR!"}
 
-* POST /setLow/app : Low MandalArt ( 3단계 만다라트 제목 수정 )
+* POST /setLow/app : Low MandalArt ( 3단계 만다라트 achievement 수정 )
 
 > Params
 
@@ -105,7 +105,7 @@
 
     low : Low Array Num ( 3단계 만다라트의 배열 번호)
 
-    title : Low MandalArt Title ( 3단계 만다라트 목표)
+    achievement : Low MandalArt achievement ( 3단계 만다라트 달성 수치 )
 
 > Response
 

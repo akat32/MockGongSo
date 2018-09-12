@@ -126,28 +126,28 @@ function setMandal(app, passport, Users, rndstring){
     var mandal = user.middleMandalArt[req.body.middle];
     switch (req.body.low) {
       case 1:
-        mandal.smallMandalArt1.title = req.body.title;
+        mandal.smallMandalArt1.achievement = req.body.achievement;
         break;
       case 2:
-        mandal.smallMandalArt2.title = req.body.title;
+        mandal.smallMandalArt2.achievement = req.body.achievement;
         break;
       case 3:
-        mandal.smallMandalArt3.title = req.body.title;
+        mandal.smallMandalArt3.achievement = req.body.achievement;
         break;
       case 4:
-        mandal.smallMandalArt4.title = req.body.title;
+        mandal.smallMandalArt4.achievement = req.body.achievement;
         break;
       case 5:
-        mandal.smallMandalArt5.title = req.body.title;
+        mandal.smallMandalArt5.achievement = req.body.achievement;
         break;
       case 6:
-        mandal.smallMandalArt6.title = req.body.title;
+        mandal.smallMandalArt6.achievement = req.body.achievement;
         break;
       case 7:
-        mandal.smallMandalArt7.title = req.body.title;
+        mandal.smallMandalArt7.achievement = req.body.achievement;
         break;
       case 8:
-        mandal.smallMandalArt8.title = req.body.title;
+        mandal.smallMandalArt8.achievement = req.body.achievement;
         break;
       default:
         return res.status(400).json({message : "params ERR!"})
