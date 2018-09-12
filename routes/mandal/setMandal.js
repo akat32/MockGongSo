@@ -121,9 +121,9 @@ function setMandal(app, passport, Users, rndstring){
   .post('/setLow/app', async(req,res)=>{
     var user = await Users.findOne({token : req.body.token})
     if(!user) return res.status(404).json({message : "User Not Found!"})
-    var result = await Users.update({token : user.token}, {$pull : {middleMandalArt : {order : req.body.middle - 1}}})
+    var result = await Users.update({token : user.token}, {$pull : {middleMandalArt : {order : req.body.middle}}})
     if(!result.ok) return res.status(500).json({message : "ERR!"})
-    var mandal = user.middleMandalArt[req.body.middle - 1];
+    var mandal = user.middleMandalArt[req.body.middle];
     switch (req.body.low) {
       case 1:
         mandal.smallMandalArt1.title = req.body.title;
