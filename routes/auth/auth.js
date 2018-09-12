@@ -10,9 +10,13 @@ function auth(app, Users, passport, rndstring){
   })
   .post('/signin', async(req,res)=>{
     var result = await Users.findOne({email : req.body.email, passwd : req.body.passwd})
-    if(!result)
-    return res.status(404).json({message : "User Not Found"})
-    else return res.status(200).json({token : result.token});
+    if(!result) return res.status(404).json({message : "User Not Found"})
+    var data = {
+      token : result.token,
+      name : result.name,
+      startDay : result.userMandalArt.startDay
+    }
+    return res.status(200).json({data : data});
   })
   .post('/duplicatechk', async(req,res)=>{
     var result = await Users.findOne({email : req.body.email})

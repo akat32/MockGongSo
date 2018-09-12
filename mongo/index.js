@@ -24,8 +24,8 @@ var UsersSchema = mongoose.Schema({
     title : {type : String}, // 만다라트 이름
     mostWork : {type : String, default : ""}, // 가장 많이 한 항목
     achievement : {type : Number, default : 0}, // 성취도
-    startDay : {type : String}, //시작일
-    endDay : {type : String}, // 종료일
+    startDay : {type : String, default : ""}, //시작일
+    endDay : {type : String, default : ""}, // 종료일
     isEnd : {type : Boolean, default : false}, // 이거 종료됨?
     themaCode : {type : String, default : "base"} // 테마
   },

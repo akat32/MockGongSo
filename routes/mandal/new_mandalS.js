@@ -81,4 +81,12 @@ function new_mandalS(app, passport, Users, rndstring){
    // result = await Users.update({token : req.body.token}, {$set : {}})
    res.status(200).json({json : req.body.title});
  })
+ .post('/addDay/app', async(req,res)=>{
+   var result = await Users.findOne({token : req.body.token})
+   var mandal = result.userMandalArt;
+   mandal.startDay = req.body.startDay
+   result = await Users.update({token : req.body.token}, {$set : {userMandalArt : mandal}})
+   if(!result.ok) return res.status(500).json({message : "ERR!"})
+   else return res.status(200).json({message : "success!"})
+ })
 }

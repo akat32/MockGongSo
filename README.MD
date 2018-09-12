@@ -32,7 +32,13 @@
 
 > Response
 
-    HTTP 200 : {token : User Token}
+    HTTP 200 : { data :
+      {
+        token : User's token,
+        name : User's name,
+        startDay : MandalArt startDay
+      }
+    }
 
     HTTP 404 : {message : "User Not Found"}
 
@@ -106,5 +112,19 @@
     HTTP 200 : {message : "success!"}
 
     HTTP 404 {message : "User Not Found!"}
+
+    HTTP 500 {message : "ERR!"}
+
+* POST /addDay/app : add MandalArt Start Day ( 만다라트 시작일 지정 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+    startDay : ex) "2018-09-12"
+
+> Response
+
+    HTTP 200 : {message : "success!"}
 
     HTTP 500 {message : "ERR!"}
