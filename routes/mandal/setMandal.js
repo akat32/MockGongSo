@@ -124,7 +124,7 @@ function setMandal(app, passport, Users, rndstring){
     var result = await Users.update({token : user.token}, {$pull : {middleMandalArt : {order : req.body.middle}}})
     if(!result.ok) return res.status(500).json({message : "ERR!"})
     var mandal = user.middleMandalArt[req.body.middle];
-    switch (req.body.low) {
+    switch (parseInt(req.body.low)) {
       case 1:
         mandal.smallMandalArt1.achievement = req.body.achievement;
         break;
