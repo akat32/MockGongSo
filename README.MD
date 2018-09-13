@@ -162,3 +162,21 @@
     HTTP 200 : {message : "success!"}
 
     HTTP 500 : {message : "ERR!"}
+
+* POST /getTMandalChk/app : Get User's Small MandalArt ( 작은 만다라트 가져오기 + 유무 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+> Response
+
+    HTTP 200 : re = {
+      title : result.userMandalArt.title, (제목)
+      achievement :  result.userMandalArt.achievement, (성취도)
+      mandal : result.middleMandalArt ( 배열 )
+    }
+
+    HTTP 401 : {message : "Not Found!"}
+
+    HTTP 404 : {message : "Mandal Not Found!"}

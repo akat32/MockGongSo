@@ -1,10 +1,10 @@
 module.exports = getTMandal;
 
 function getTMandal(app, passport, Users, rndstring){
-  app.post('/getTMandalChk', async(req,res)=>{
+  app.post('/getTMandalChk/app', async(req,res)=>{
     var result = await Users.findOne({token : req.body.token})
-    if(!result) return res.status(404).json({message : "User Not Found!"})
-    if(!result.triangleMandalArt.triangleMandalChk) return res.status(401).json({message : "Not Found!"})
+    if(!result) return res.status(401).json({message : "Not Found!"})
+    if(!result.triangleMandalArt.triangleMandalChk) return res.status(404).json({message : "Mandal Not Found!"})
     var re = {
       title : result.triangleMandalArt.title,
       achievement : result.triangleMandalArt.achievement,
