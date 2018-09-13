@@ -163,7 +163,7 @@
 
     HTTP 500 : {message : "ERR!"}
 
-* POST /getTMandalChk/app : Get User's Small MandalArt ( 작은 만다라트 가져오기 + 유무 )
+  * POST /getTMandalChk/app : Get User's Small MandalArt ( 작은 만다라트 가져오기 + 유무 )
 
 > Params
 

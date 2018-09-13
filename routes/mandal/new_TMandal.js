@@ -6,7 +6,8 @@ function new_TMandal(app, passport, Users, rndstring){
       title : req.body.title,
       triangleMandalChk : true,
       startDay : req.body.startDay
-     }
+    }
+    console.log(JSON.stringify(req.body))
     for(var i = 0; i < 3; i++){
       var middle = {
         order : i,

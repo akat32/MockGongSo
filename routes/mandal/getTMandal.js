@@ -12,6 +12,4 @@ function getTMandal(app, passport, Users, rndstring){
     }
     res.status(200).json({re : re});
   })
-
-
 }
