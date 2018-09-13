@@ -46,5 +46,5 @@ require('./routes/mandal/new_mandalS')(app, passport, Users, rndstring);
 require('./routes/mandal/getMandal')(app, passport, Users, rndstring);
 require('./routes/mandal/setMandal')(app, passport, Users, rndstring);
 require('./routes/mandal/new_TMandal')(app, passport, Users, rndstring);
-//require('./routes/mandal/getTMandal')(app, passport, Users, rndstring);
+require('./routes/mandal/getTMandal')(app, passport, Users, rndstring);
 //require('./routes/mandal/setTMandal')(app, passport, Users, rndstring);
