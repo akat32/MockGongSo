@@ -26,7 +26,7 @@
 
 > Params
 
-    email : User's E-mail ( 유저 이메일 )
+    email : Us  er's E-mail ( 유저 이메일 )
 
     passwd : User's Password ( 유저 비밀번호 )
 
@@ -128,3 +128,37 @@
     HTTP 200 : {message : "success!"}
 
     HTTP 500 {message : "ERR!"}
+
+* POST /tmake/app : Small MandalArt ( 작은 만다라트 만들기 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+    title : Small MandalArt's Title ( 작은 만다라트 제목 )
+
+    startDay : Start Day ( 만다라트 시작일 )
+
+    middle : Array of MandalArt ( 만다라트 배열 )
+
+    ex)
+    "middle" : [
+      {
+        "small" : ["센","치",""],
+        "title":"십"
+      },
+      {
+        "small" : ["소","지","섭"],
+        "title":"란"
+      },
+      {
+        "small" : ["밤","캐스퍼","라디오"],
+        "title" : "한"
+      }
+    ]
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 500 : {message : "ERR!"}

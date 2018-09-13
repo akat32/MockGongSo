@@ -75,17 +75,31 @@ var UsersSchema = mongoose.Schema({
     date : {type : Date}, // 일기 쓴 날짜
     diary : {type : String} // 일기
   }],
-  triangleMandalChk : {type : Boolean, default : false}, // 심긱형 만다라트의 유무 체크
   triangleMandalArt : { // 삼각형 만다라트
-    name : {type : String}, // 만다라트 이름
-    goal : {type : String}, // 만다라트 목표
-    isEnd : {type : String}, // 이거 끝남?
+    triangleMandalChk : {type : Boolean, default : false}, // 심긱형 만다라트의 유무 체크
+    title : {type : String, default : ""}, // 만다라트 이름
+    isEnd : {type : Boolean, default : false}, // 이거 끝남?
     achievement : {type : Number, default : 0},
-    themaCode : {type : String, default : "base"} //테마 코드
+    themaCode : {type : String, default : "base"}, //테마 코드
+    startDay : {type : String, default : ""}, //시작일
+    endDay : {type : String, default : ""}, // 종료일
   },
   triangleMiddleMandalArt : [{ // 중간 크기 만다라트
+    order : {type : Number},
     middleTitle : {type : String, default : ""}, // 중간 칸 목표
     achievement : {type : Number, default : 0}, // 중간 칸 성취도
+    smallMandalArt1 : {
+      title : {type : String, default : ""},
+      achievement : {type : Number, default : 0}
+    },
+    smallMandalArt2 : {
+      title : {type : String, default : ""},
+      achievement : {type : Number, default : 0}
+    },
+    smallMandalArt3 : {
+      title : {type : String, default : ""},
+      achievement : {type : Number, default : 0}
+    }
   }],
   targetAD : {
     name : {type : String}, // 광고 회사
