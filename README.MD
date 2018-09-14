@@ -250,4 +250,65 @@
 
     HTTP 200 : {message : "success!"}
 
+    HTTP 500 : {message : "ERR!"}n
+
+* POST /getDiary/app : Get User Diary ( 유저 일기 가져오기 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+> Response
+
+    HTTP 200 : ex)
+
+    {
+      "re": [
+          {
+              "date": "2018-06-01",
+              "diary": [
+                  {
+                      "index": "아니이런.. 젠장 쉬이펄"
+                  },
+                  {
+                      "index": "아니이런.. 젠장 쉬이펄"
+                  },
+                  {
+                      "index": "아니이런.. 젠장 쉬이펄"
+                  }
+              ]
+          },
+          {
+              "date": "2018-06-16",
+              "diary": [
+                  {
+                      "index": "아니이런.."
+                  },
+                  {
+                      "index": "아니이런.. 젠장"
+                  },
+                  {
+                      "index": "아니이런.. 젠장 쉬이펄"
+                  }
+              ]
+          },
+          {
+              "date": "2018-06-18",
+              "diary": [
+                  {
+                      "index": "아니이런.. 젠장 쉬이펄"
+                  },
+                  {
+                      "index": "아니이런.. 젠장 쉬이펄"
+                  },
+                  {
+                      "index": "아니이런.. 젠장 쉬이펄"
+                  }
+              ]
+          }
+       ]
+    }
+
+    HTTP 404 : {message : "User Not Found!"}
+
     HTTP 500 : {message : "ERR!"}
