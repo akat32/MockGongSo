@@ -66,14 +66,13 @@ var UsersSchema = mongoose.Schema({
       achievement : {type : Number, default : 0} // 성취도
     }
   }],
-  mandalLog : [{
-    date : {type : Date}, // 로그 찍힌 날짜
-    index : {type : String} // 내용
-  }],
   userDiary : [{ // 유저 일기
     title : {type : String, default : "제목"}, // 일기 제목
-    date : {type : Date}, // 일기 쓴 날짜
-    diary : {type : String} // 일기
+    date : {type : String}, // 일기 쓴 날짜
+    diary : [{
+      index : {type : String}, // 일기
+      token : {type : String}
+    }]
   }],
   triangleMandalArt : { // 삼각형 만다라트
     triangleMandalChk : {type : Boolean, default : false}, // 심긱형 만다라트의 유무 체크

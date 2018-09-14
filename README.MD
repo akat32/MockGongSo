@@ -204,3 +204,34 @@
     HTTP 200 : {message : "success!"}
 
     HTTP 500 : {message : "ERR!"}
+
+* POST /Tset/app : Modify Sub MandalArt ( 작은 만다라트 수정 )
+
+> Params
+
+    ex)
+    {
+      "middle" : [
+        {
+          "small" : ["센","치",""],
+          "title":"오십"
+        },
+        {
+          "small" : ["소","지","섭"],
+          "title":"란"
+        },
+        {
+          "small" : ["밤","캐스퍼","라디오"],
+          "title" : "한"
+        }
+      ],
+      "title":"십란",
+      "token":"T4x831oUCFlXcYqAWsQZvfDnb",
+      "startDay":"2018-06-23"
+    }
+
+> Reponse
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 500 : {message : "ERR!"}
