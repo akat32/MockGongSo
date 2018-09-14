@@ -163,7 +163,7 @@
 
     HTTP 500 : {message : "ERR!"}
 
-  * POST /getTMandalChk/app : Get User's Small MandalArt ( 작은 만다라트 가져오기 + 유무 )
+* POST /getTMandalChk/app : Get User's Small MandalArt ( 작은 만다라트 가져오기 + 유무 )
 
 > Params
 
@@ -180,3 +180,27 @@
     HTTP 401 : {message : "Not Found!"}
 
     HTTP 404 : {message : "Mandal Not Found!"}
+
+* POST /delMain/app : delete Main MAndalArt ( 메인 만다라트 삭제 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 500 : {message : "ERR!"}
+
+* POST /delSub/app : delete Sub MAndalArt ( 작은 만다라트 삭제 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 500 : {message : "ERR!"}
