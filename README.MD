@@ -235,3 +235,19 @@
     HTTP 200 : {message : "success!"}
 
     HTTP 500 : {message : "ERR!"}
+
+* POST /addDiary/app : Add New Diary ( 유저 일기 추가 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+    date : Diary's date ( 일기 날짜 )
+
+    index : Diary's index ( 일기 내용 )
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 500 : {message : "ERR!"}
