@@ -21,19 +21,21 @@ function diary(app, passport, Users, rndstring){
       var new_diary = {
         date : "",
         diary : [{
+          token : "",
           index : ""
         }]
       }
       for (var j = 0; re[j] != null; j++){
         if(diary[i].date === re[j].date){
-          var diaryIndex = { index : diary[i].index }
+          var diaryIndex = { index : diary[i].index, token : diary[i].token }
           re[j].diary.push(diaryIndex);
           chk = 1;
         }
       }
       if(!chk){
         new_diary.date = diary[i].date;
-        new_diary.diary[0].index = diary[i].index
+        new_diary.diary[0].index = diary[i].index;
+        new_diary.diary[0].token = diary[i].token;
         re.push(new_diary);
       }
     }
