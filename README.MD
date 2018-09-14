@@ -312,3 +312,17 @@
     HTTP 404 : {message : "User Not Found!"}
 
     HTTP 500 : {message : "ERR!"}
+
+* POST /delDiary/app : Delete JUser Diary ( 유저 일기 지우기 )
+
+> Params
+
+    token : User's token ( 유저 토큰 )
+
+    diaryToken : Diary's token Array ( 일기 토큰 {문자열 배열 ["som","e"]})
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 500 : {message : "ERR!"}

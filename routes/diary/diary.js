@@ -17,7 +17,6 @@ function diary(app, passport, Users, rndstring){
     var diary = user.userDiary;
     var re = [];
     for(var i = 0; diary[i] != null; i++){
-      console.log(diary[i])
       var chk = 0;
       var new_diary = {
         date : "",
@@ -44,5 +43,12 @@ function diary(app, passport, Users, rndstring){
     }
     re.sort(com);
     res.status(200).json({re : re});
+  })
+  .post('/delDiary/app', async (req,res)=>{
+    for(var i = 0; req.body.diaryToken[i] != null; i++){
+      var result = await Users.update({token : req.body.token}, {$pull : {userDiary : {token : req.body.diaryToken[i]}}})
+      if(!result.ok) return res.status(500).json({message : "ERR!"})
+    }
+    return res.status(200).json({message : "success!"})
   })
 }
