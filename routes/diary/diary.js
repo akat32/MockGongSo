@@ -5,7 +5,7 @@ function diary(app, passport, Users, rndstring){
     var new_diary = {
       date : req.body.date,
       index : req.body.index,
-      token : rndstring.generate(21);
+      token : rndstring.generate(21)
     }
     var result = await Users.update({token : req.body.token}, {$push :  {userDiary : new_diary}})
     if(!result.ok) return res.status(500).json({message : "ERR!"})
