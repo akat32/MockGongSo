@@ -14,7 +14,9 @@ function auth(app, Users, passport, rndstring){
     var data = {
       token : result.token,
       name : result.name,
-      startDay : result.userMandalArt.startDay
+      startDay : result.userMandalArt.startDay,
+      MandalChk : result.MandalChk,
+      achievement : result.userMandalArt.achievement
     }
     return res.status(200).json({data : data});
   })
