@@ -13,6 +13,7 @@ function auth(app, Users, passport, rndstring){
     if(!result) return res.status(404).json({message : "User Not Found"})
     var data = {
       token : result.token,
+      triMandalChk : result.triangleMandalArt.triangleMandalChk,
       name : result.name,
       title : result.userMandalArt.title,
       startDay : result.userMandalArt.startDay,
