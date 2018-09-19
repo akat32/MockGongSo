@@ -18,7 +18,8 @@ function auth(app, Users, passport, rndstring){
       title : result.userMandalArt.title,
       startDay : result.userMandalArt.startDay,
       MandalChk : result.MandalChk,
-      achievement : result.userMandalArt.achievement
+      achievement : result.userMandalArt.achievement,
+      triTitle : result.triangleMandalArt.title
     }
     return res.status(200).json({data : data});
   })
