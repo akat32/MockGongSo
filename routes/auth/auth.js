@@ -64,16 +64,12 @@ function auth(app, Users, passport, rndstring){
     if(!result){
       var user = {
         token : req.body.token,
-        name : req.body.name
+        name : req.body.name,
+        email : rndstring.generate(25)
       }
-      user = new Users(user);
-      try {
-        var user_result = await user.save();
-      }catch(e){
-        if(e instanceof user_duplicate) return res.status(409).json({message:"already exist"});
-        if(e instanceof ValidationError) return res.status(400).json({message: e.message});
-        if(e instanceof paramsError) return res.status(400).json({message: e.message});
-      }
+      var new_user = new Users(user);
+      var user_result = await new_user.save();
+      if(user_result.ok) return res.status(500).json({message : "ERR!"})
       return res.status(201).json({data : req.body})
     }
     else {
