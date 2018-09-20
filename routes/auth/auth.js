@@ -44,4 +44,50 @@ function auth(app, Users, passport, rndstring){
     var result = await Users.find();
     res.send(result);
   })
+  .get('/auto/:token', async(req,res)=>{
+    var result = await Users.findOne({token : req.params.token})
+    if(!result) return res.status(404).json({message : "User Not Found!"})
+    var data = {
+      token : result.token,
+      triMandalChk : result.triangleMandalArt.triangleMandalChk,
+      name : result.name,
+      title : result.userMandalArt.title,
+      startDay : result.userMandalArt.startDay,
+      MandalChk : result.MandalChk,
+      achievement : result.userMandalArt.achievement,
+      triTitle : result.triangleMandalArt.title
+    }
+    return res.status(200).json({data : data})
+  })
+  .post('/fb/app', async (req,res)=>{
+    var result = await Users.findOne({token : req.body.token})
+    if(!result){
+      var user = {
+        token : req.body.token,
+        name : req.body.name
+      }
+      user = new Users(user);
+      try {
+        var user_result = await user.save();
+      }catch(e){
+        if(e instanceof user_duplicate) return res.status(409).json({message:"already exist"});
+        if(e instanceof ValidationError) return res.status(400).json({message: e.message});
+        if(e instanceof paramsError) return res.status(400).json({message: e.message});
+      }
+      return res.status(201).json({data : req.body})
+    }
+    else {
+      var data = {
+        token : result.token,
+        triMandalChk : result.triangleMandalArt.triangleMandalChk,
+        name : result.name,
+        title : result.userMandalArt.title,
+        startDay : result.userMandalArt.startDay,
+        MandalChk : result.MandalChk,
+        achievement : result.userMandalArt.achievement,
+        triTitle : result.triangleMandalArt.title
+      }
+      return res.status(200).json({data : data})
+    }
+  })
 }

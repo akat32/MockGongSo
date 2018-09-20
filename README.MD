@@ -32,11 +32,16 @@
 
 > Response
 
-    HTTP 200 : { data :
-      {
-        token : User's token,
-        name : User's name,
-        startDay : MandalArt startDay
+    HTTP 200 : {
+      data : {
+        token : result.token,
+        triMandalChk : result.triangleMandalArt.triangleMandalChk,
+        name : result.name,
+        title : result.userMandalArt.title,
+        startDay : result.userMandalArt.startDay,
+        MandalChk : result.MandalChk,
+        achievement : result.userMandalArt.achievement,
+        triTitle : result.triangleMandalArt.title
       }
     }
 
@@ -335,3 +340,32 @@
     HTTP 200 : {message : "success!"}
 
     HTTP 500 : {message : "ERR!"}
+
+* GET /auto/:token : User auto Login ( 유저 자동 로그인 )
+
+> Response
+
+    Same /signin  ( /signin 과 같습니다. )
+
+* POST /fb/app : Social Login ( 소셜 로그인 )
+
+> Params
+
+    token : Uid token
+
+    name : User name
+
+> Response
+
+    HTTP 200 : Same /Signin ( 로그인 성공 )
+
+    HTTP 201 : {          ( 새로운 유저 생성 )
+      data : {
+        token : user token,
+        name : user name
+      }
+    }
+
+    HTTP 400 : {message : e.message}
+
+    HTTP 409 : {message : "already exist"}
