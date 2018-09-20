@@ -367,3 +367,15 @@
     }
 
     HTTP 500 : {message : "ERR!"}
+
+* POST /delUser : Remove User ( 회원 탈퇴 )
+
+> Params
+
+    token : User's token
+
+> Response
+
+    HTTP 200 : {message : "success!"}
+
+    HTTP 500 : {message : "ERR!"}
