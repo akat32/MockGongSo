@@ -161,6 +161,36 @@ function setMandal(app, passport, Users, rndstring){
         $sort : {order : 1}}
       }
     })
+    mandal = await Users.findOne({token : user.token})
+    mandal = mandal.middleMandalArt
+    var ac = 0;
+    for(var i = 0; i < 8; i ++){
+      var sum = 0;
+      var cnt = 0;
+      sum += mandal[i].smallMandalArt1.achievement
+      if( mandal[i].smallMandalArt1.achievement >= 50) cnt = cnt + 1
+      sum += mandal[i].smallMandalArt2.achievement
+      if( mandal[i].smallMandalArt2.achievement >= 50) cnt = cnt + 1
+      sum += mandal[i].smallMandalArt3.achievement
+      if( mandal[i].smallMandalArt3.achievement >= 50) cnt = cnt + 1
+      sum += mandal[i].smallMandalArt4.achievement
+      if( mandal[i].smallMandalArt4.achievement >= 50) cnt = cnt + 1
+      sum += mandal[i].smallMandalArt5.achievement
+      if( mandal[i].smallMandalArt5.achievement >= 50) cnt = cnt + 1
+      sum += mandal[i].smallMandalArt6.achievement
+      if( mandal[i].smallMandalArt6.achievement >= 50) cnt = cnt + 1
+      sum += mandal[i].smallMandalArt7.achievement
+      if( mandal[i].smallMandalArt7.achievement >= 50) cnt = cnt + 1
+      sum += mandal[i].smallMandalArt8.achievement
+      if( mandal[i].smallMandalArt8.achievement >= 50) cnt = cnt + 1
+      sum *= 0.015;
+      sum += cnt * 0.0625;
+      ac += sum;
+    }
+    var setAchiv = user.userMandalArt
+    setAchiv.achievement = ac;
+    result = await Users.update({token : user.token}, {$set : {userMandalArt : setAchiv}})
+    if(!result.ok) return res.status(500).json({message : "ERR!"})
     res.status(200).json({message : "success!"})
   })
 }
@@ -201,5 +231,5 @@ function setMandal(app, passport, Users, rndstring){
 //     }
 //   ],
 //   "title":"십란",
-//   "token":"HIcJtIL9AsGhCrdjMqlBLTK3A"
+//   "token":"z0NuWp9Es4OToxw9vuKnmDCic"
 // }
