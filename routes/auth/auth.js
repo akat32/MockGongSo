@@ -88,7 +88,7 @@ function auth(app, Users, passport, rndstring){
   })
   .post('/delUser', async (req,res)=>{
     var result = await Users.remove({token : req.body.token})
-    if(result.ok) return res.status(500).json({message : "ERR!"})
+    if(!result.ok) return res.status(500).json({message : "ERR!"})
     else return res.status(200).json({message : "success!"})
   })
 }
