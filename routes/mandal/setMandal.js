@@ -191,7 +191,7 @@ function setMandal(app, passport, Users, rndstring){
     setAchiv.achievement = ac;
     result = await Users.update({token : user.token}, {$set : {userMandalArt : setAchiv}})
     if(!result.ok) return res.status(500).json({message : "ERR!"})
-    res.status(200).json({message : "success!"})
+    res.status(200).json({achievement : ac})
   })
 }
 
